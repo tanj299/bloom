@@ -58,12 +58,12 @@
 		640132DB243FA1C100D2479B /* Bloom */ = {
 			isa = PBXGroup;
 			children = (
+				640132E7243FA1C400D2479B /* Assets.xcassets */,
 				640132DC243FA1C100D2479B /* AppDelegate.swift */,
 				640132DE243FA1C100D2479B /* SceneDelegate.swift */,
 				640132E0243FA1C100D2479B /* FirstViewController.swift */,
 				640132E2243FA1C100D2479B /* SecondViewController.swift */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
-				640132E7243FA1C400D2479B /* Assets.xcassets */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
 				640132EC243FA1C400D2479B /* Info.plist */,
 			);

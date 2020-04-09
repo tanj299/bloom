@@ -14,6 +14,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func dummy_button() {
+        print("Init commit")
+    }
 
 
 }
