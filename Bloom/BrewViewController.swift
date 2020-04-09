@@ -8,15 +8,15 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class BrewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func buttonClicked() {
-        print("Init commit")
+    @IBAction func brewTest() {
+        print("You are in Brew Controller")
     }
 
 
