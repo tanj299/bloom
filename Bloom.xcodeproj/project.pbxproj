@@ -49,6 +49,7 @@
 			children = (
 				640132DB243FA1C100D2479B /* Bloom */,
 				640132DA243FA1C100D2479B /* Products */,
+				640132F4243FA63000D2479B /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,7 +74,6 @@
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
 				640132EC243FA1C400D2479B /* Info.plist */,
-				640132F4243FA63000D2479B /* README.md */,
 			);
 			path = Bloom;
 			sourceTree = "<group>";
