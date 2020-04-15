@@ -14,8 +14,8 @@
 		640132E8243FA1C400D2479B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640132E7243FA1C400D2479B /* Assets.xcassets */; };
 		640132EB243FA1C400D2479B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640132E9243FA1C400D2479B /* LaunchScreen.storyboard */; };
 		640132F3243FA46900D2479B /* MapForItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640132F2243FA46900D2479B /* MapForItinerary.swift */; };
-		640132F8243FB33900D2479B /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640132F7243FB33900D2479B /* InventoryViewController.swift */; };
 		64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64133C0D243FB6660037231F /* DiscoverViewController.swift */; };
+		64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F54824476B3700CC079A /* InventoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +29,8 @@
 		640132EC243FA1C400D2479B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		640132F2243FA46900D2479B /* MapForItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapForItinerary.swift; sourceTree = "<group>"; };
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		640132F7243FB33900D2479B /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InventoryViewController.swift; path = ../InventoryViewController.swift; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		64C1F54824476B3700CC079A /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +67,8 @@
 				640132DC243FA1C100D2479B /* AppDelegate.swift */,
 				640132DE243FA1C100D2479B /* SceneDelegate.swift */,
 				640132E0243FA1C100D2479B /* BrewViewController.swift */,
+				64C1F54824476B3700CC079A /* InventoryViewController.swift */,
 				64133C0D243FB6660037231F /* DiscoverViewController.swift */,
-				640132F7243FB33900D2479B /* InventoryViewController.swift */,
 				640132F2243FA46900D2479B /* MapForItinerary.swift */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
@@ -150,8 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				640132E1243FA1C100D2479B /* BrewViewController.swift in Sources */,
+				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
 				640132DD243FA1C100D2479B /* AppDelegate.swift in Sources */,
-				640132F8243FB33900D2479B /* InventoryViewController.swift in Sources */,
 				64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */,
 				640132F3243FA46900D2479B /* MapForItinerary.swift in Sources */,
 				640132DF243FA1C100D2479B /* SceneDelegate.swift in Sources */,
