@@ -31,6 +31,7 @@
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		64C1F54824476B3700CC079A /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		64C1F54C2447D26300CC079A /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +50,7 @@
 			children = (
 				640132DB243FA1C100D2479B /* Bloom */,
 				640132DA243FA1C100D2479B /* Products */,
+				64C1F54C2447D26300CC079A /* NOTES.md */,
 				640132F4243FA63000D2479B /* README.md */,
 			);
 			sourceTree = "<group>";

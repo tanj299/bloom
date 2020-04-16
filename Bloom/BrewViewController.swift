@@ -6,8 +6,6 @@
 //  Copyright © 2020 Jayson Tan. All rights reserved.
 //  SN: Student Notes - Intended for learning and note taking; do not take into consideration when reviewing
 
-
-//  SN: To allow ScrollView to work, every field must be constrained or simulator won't work
 //  SN: This applies to ScrollView and TextView
 //  SN: @IBAction: Work to happen when you use the element (ie. hit a button)
 //  SB: @IBOutlet: Manipulate the element (ie. change its title, rounds it corners, etc.)
@@ -62,6 +60,7 @@ class BrewViewController: UIViewController {
     @IBAction func manualPourOver() {
         print("Manual Pour Over button")
     }
+    
  
 // MARK: - Siphon
     
@@ -76,6 +75,7 @@ class BrewViewController: UIViewController {
     @IBAction func bodumSantos() {
         print("Bodum Santos button")
     }
+    
     
 // MARK: - Miscellaneous
     
