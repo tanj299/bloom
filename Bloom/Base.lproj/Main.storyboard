@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Brew-->
+        <!--Brew View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="BrewViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +20,13 @@
                         </userGuides>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaO-l5-f29">
-                                <rect key="frame" x="168" y="20" width="39" height="21"/>
+                                <rect key="frame" x="168" y="64" width="39" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWL-Oy-QFt">
-                                <rect key="frame" x="0.0" y="49" width="375" height="569"/>
+                                <rect key="frame" x="0.0" y="93" width="375" height="525"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-me-WOB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -38,7 +38,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ZX4-27-myJ"/>
                                                     <constraint firstAttribute="height" constant="100" id="ajZ-zY-eJb"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="aeropress">
+                                                <state key="normal" image="aeropress">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -52,6 +52,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="aeroPress" destination="9pv-A4-QxB" eventType="touchUpInside" id="hc4-DP-mAX"/>
+                                                    <segue destination="oFY-Bz-9ga" kind="show" identifier="AeroPress" id="B6c-6C-jB9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rV-xR-CID">
@@ -75,6 +76,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="harioV60" destination="9pv-A4-QxB" eventType="touchUpInside" id="2p3-XE-RqA"/>
+                                                    <segue destination="Dkr-No-lRR" kind="show" id="NPM-0k-Z5C"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSg-C1-TWp">
@@ -145,6 +147,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="frenchPress" destination="9pv-A4-QxB" eventType="touchUpInside" id="E5e-bn-E50"/>
+                                                    <segue destination="tNA-5l-a0W" kind="show" id="EQe-Nf-8kY"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Immersion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXm-Y4-ZpD">
@@ -270,6 +273,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="harioTechnica" destination="9pv-A4-QxB" eventType="touchUpInside" id="xRn-1Y-Dh6"/>
+                                                    <segue destination="Jkf-mP-2Y1" kind="show" id="8os-QN-t1D"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="L5W-3k-Gfp">
@@ -386,6 +390,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="phin" destination="9pv-A4-QxB" eventType="touchUpInside" id="EeE-qO-hFc"/>
+                                                    <segue destination="k4Y-9o-JWn" kind="show" id="ABB-dr-Pj6"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AeroPress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAg-1L-2U6">
@@ -589,7 +594,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="QV6-1n-HRz"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOM-e1-Gif">
-                                <rect key="frame" x="287" y="15" width="68" height="30"/>
+                                <rect key="frame" x="287" y="59" width="68" height="30"/>
                                 <state key="normal" title="Brew Test"/>
                                 <connections>
                                     <action selector="brewTest" destination="9pv-A4-QxB" eventType="touchUpInside" id="O4C-ZK-w9B"/>
@@ -620,14 +625,78 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Brew" image="brew_tab_1x" id="acW-dT-cKf">
-                        <color key="badgeColor" red="0.85882352939999995" green="0.75686274509999996" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="fZZ-f8-sfX"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-916" y="767.76611694152928"/>
+            <point key="canvasLocation" x="-892" y="1577"/>
+        </scene>
+        <!--AeroPress-->
+        <scene sceneID="RIC-bE-oI3">
+            <objects>
+                <viewController id="oFY-Bz-9ga" customClass="AeroPressViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fFv-st-2EG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.75686274509803919" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Aec-NZ-iyT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AeroPress" id="iUd-dM-R8W">
+                        <barButtonItem key="backBarButtonItem" title="Is this Hover?" id="jOv-nI-Y2v"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fv9-Ig-RKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2562" y="2430"/>
+        </scene>
+        <!--Hario V60-->
+        <scene sceneID="Azw-uD-2CY">
+            <objects>
+                <viewController id="Dkr-No-lRR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="69V-vi-h7x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.75686274509803919" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="GaC-WX-eS8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hario V60" id="SBp-w6-Bq9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp6-Sm-YuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2562" y="3108"/>
+        </scene>
+        <!--Hario Technica-->
+        <scene sceneID="fIX-cf-nZX">
+            <objects>
+                <viewController id="Jkf-mP-2Y1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mpe-wt-Bl8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.75686274509803919" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="BWo-mq-cky"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hario Technica" id="qsq-fx-Ai0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NBy-Bs-tbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2562" y="3788"/>
+        </scene>
+        <!--French Press-->
+        <scene sceneID="ex2-En-Z03">
+            <objects>
+                <viewController id="tNA-5l-a0W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FVT-iJ-YgR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.75686274509803919" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4Eh-Z2-At8"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="French Press" id="ClT-VS-2ma"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kT0-Eh-dva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1774" y="2429"/>
         </scene>
         <!--Discover-->
         <scene sceneID="wg7-f3-ORb">
@@ -670,7 +739,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="767.76611694152928"/>
+            <point key="canvasLocation" x="-1" y="838"/>
         </scene>
         <!--Inventory-->
         <scene sceneID="xxw-yc-Amc">
@@ -712,7 +781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eV-ic-fdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="768"/>
+            <point key="canvasLocation" x="889" y="838"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -726,7 +795,7 @@
                         <color key="selectedImageTintColor" red="0.94901960780000005" green="0.67843137249999996" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="9R2-jQ-g36" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="kdv-Cp-0ci" kind="relationship" relationship="viewControllers" id="vBr-0e-2TC"/>
                     </connections>
@@ -735,14 +804,52 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--Brew-->
+        <scene sceneID="bDz-ae-9Xq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9R2-jQ-g36" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Brew" image="brew_tab_1x" id="acW-dT-cKf">
+                        <color key="badgeColor" red="0.85882352939999995" green="0.75686274509999996" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZh-qk-MRd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.68004196880000001" green="0.56236875060000002" blue="0.47950637340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Bui-1T-98Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53M-Er-38f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="838"/>
+        </scene>
+        <!--Phin-->
+        <scene sceneID="Ml5-Kd-ZQL">
+            <objects>
+                <viewController id="k4Y-9o-JWn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ovt-3A-LNd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.75686274509803919" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="E46-Z5-kSY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Phin" id="d3r-Vy-VWx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yX3-XK-idg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2562" y="4482"/>
+        </scene>
     </scenes>
     <resources>
         <image name="aeropress" width="50" height="50"/>
         <image name="brew_tab_1x" width="35" height="35"/>
         <image name="cold_brew" width="50" height="50"/>
-        <image name="folder" catalog="system" width="64" height="46"/>
-        <image name="french_press" width="46" height="62"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
+        <image name="french_press" width="50" height="50"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="hario_technica" width="50" height="50"/>
         <image name="hariov60" width="50" height="50"/>
         <image name="phin" width="50" height="50"/>

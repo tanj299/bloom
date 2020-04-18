@@ -1,9 +1,11 @@
+# Bloom - Student Notes 
+
 ## Student: Jayson Tan
 ## Course: CSCI 39597
 ## Instructor: Ali El Sayed
-## Last Edited: 04/15/2020
+## Last Edited: 04/18/2020
 
-### Notes
+### Textbook used: ==**iOS Apprentice 8th Edition**==
 
 - @IBAction: Work to happen when you use the element
     - Ex: Hit a button
@@ -21,3 +23,8 @@
         the View object. The View object must be constrained to the ScrollView, the button must
         be constrained to the View object
         
+- To add view controllers per button (pg. 802)
+    - Ex: Adding a controller object to a button
+    - Go to your UITabBarController Scene (like the Brew Scene) and select it, then go to Editor -> Embed In -> Navigation Controller
+    - Go back to your scene (Brew Scene) and CTRL + Drag the button to hook it up to the controller
+        - Create a **Show** segue and give it an identifier, AeroPress

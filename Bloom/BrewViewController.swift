@@ -20,6 +20,20 @@ class BrewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Hide navigation bar at top
+    // Affects Navigation Bar for the Navigation Controller from that point onwards
+    // (including all screens like AeroPress)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    // Bring back the Navigation Bar on top after exiting Navigation Controller
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     @IBAction func brewTest() {
         print("You are in Brew Controller")
     }
