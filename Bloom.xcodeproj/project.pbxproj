@@ -15,6 +15,7 @@
 		640132EB243FA1C400D2479B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640132E9243FA1C400D2479B /* LaunchScreen.storyboard */; };
 		640132F3243FA46900D2479B /* MapForItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640132F2243FA46900D2479B /* MapForItinerary.swift */; };
 		64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64133C0D243FB6660037231F /* DiscoverViewController.swift */; };
+		64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1C593244B98600045F861 /* AeroPressViewController.swift */; };
 		64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F54824476B3700CC079A /* InventoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		640132F2243FA46900D2479B /* MapForItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapForItinerary.swift; sourceTree = "<group>"; };
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		64B1C593244B98600045F861 /* AeroPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroPressViewController.swift; sourceTree = "<group>"; };
 		64C1F54824476B3700CC079A /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		64C1F54C2447D26300CC079A /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				64C1F54824476B3700CC079A /* InventoryViewController.swift */,
 				64133C0D243FB6660037231F /* DiscoverViewController.swift */,
 				640132F2243FA46900D2479B /* MapForItinerary.swift */,
+				64B1C593244B98600045F861 /* AeroPressViewController.swift */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
 				640132EC243FA1C400D2479B /* Info.plist */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */,
 				640132E1243FA1C100D2479B /* BrewViewController.swift in Sources */,
 				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
 				640132DD243FA1C100D2479B /* AppDelegate.swift in Sources */,
