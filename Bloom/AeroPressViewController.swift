@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class AeroPressViewController: UIViewController {
-
+    
+//********************************************************************************
+// @IBOutlets
+//********************************************************************************
+    
     @IBOutlet weak var timerLabel: UILabel!
     
     // Variable will hold starting value of timer
     // Can change to any amount above 0
-    var seconds = 60
+    var seconds = 5
     var timer = Timer()
     
     // Ensures that only one timer is created at a time
@@ -25,7 +30,7 @@ class AeroPressViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
 //********************************************************************************
-// @IBAction and functions
+// @IBActions
 //********************************************************************************
 
     @IBAction func start(_ sender: UIButton) {
@@ -47,9 +52,13 @@ class AeroPressViewController: UIViewController {
         pauseButton.isEnabled = true
     }
     
+    
     @objc func updateTimer() {
+        // When timer hits 0, alert the user and vibrate the phone 
         if seconds < 1 {
             timer.invalidate()
+            showAlert()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         else {
             // Decrement timer countdown by seconds
@@ -58,6 +67,7 @@ class AeroPressViewController: UIViewController {
             timerLabel.text = timeString(time: TimeInterval(seconds))
         }
     }
+    
     
     @IBAction func pause() {
         if self.isPaused == false {
@@ -75,14 +85,13 @@ class AeroPressViewController: UIViewController {
             
             // pause button should set to "Pause" if Timer is running
             self.pauseButton.setTitle("Pause", for: .normal)
-//            timer.fire()
         }
     }
 
     
     @IBAction func reset() {
         timer.invalidate()
-        seconds = 60
+        seconds = 30
         timerLabel.text = timeString(time: TimeInterval(seconds))
         
         // Prevent Timer from restarting
@@ -91,10 +100,9 @@ class AeroPressViewController: UIViewController {
         startButton.isEnabled = true
         
         // After `reset` is pressed, the pause button should reset to its pause state
-        // And if 
+        // And if reset is pressed, the pause button should reset to "Pause"
         isPaused = false
         pauseButton.setTitle("Pause", for: .normal)
-        
     }
     
     // Convert our UILabel to a time string format
@@ -111,5 +119,15 @@ class AeroPressViewController: UIViewController {
         pauseButton.isEnabled = false
         // Do any additional setup after loading the view.
     }
-
+    
+//********************************************************************************
+// @UIAlert
+//********************************************************************************
+    @IBAction func showAlert () {
+        let alert = UIAlertController(title: "Bloom", message: "Bloom finished!", preferredStyle: .alert)
+        let yes = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(yes)
+        self.present(alert, animated: true)
+    }
+    
 }

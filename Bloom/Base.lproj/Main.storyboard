@@ -204,6 +204,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="coldBrew" destination="9pv-A4-QxB" eventType="touchUpInside" id="bUa-y6-DJO"/>
+                                                    <segue destination="usU-ZX-WOZ" kind="show" id="mPK-Rf-KuL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q88-ES-2wc">
@@ -632,6 +633,21 @@
             </objects>
             <point key="canvasLocation" x="-892" y="1577"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="tSW-tS-hfe">
+            <objects>
+                <viewController id="Jvv-TC-WxX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nUh-BX-EAk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lhz-7I-pAd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3G-OS-bfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3240" y="2643"/>
+        </scene>
         <!--AeroPress-->
         <scene sceneID="RIC-bE-oI3">
             <objects>
@@ -640,14 +656,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-fN-pqf">
-                                <rect key="frame" x="143" y="323" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQa-gT-k80">
-                                <rect key="frame" x="100" y="401" width="34" height="30"/>
+                                <rect key="frame" x="100" y="268" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -655,7 +665,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oy-o3-YQh">
-                                <rect key="frame" x="236" y="401" width="39" height="30"/>
+                                <rect key="frame" x="236" y="268" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
@@ -663,7 +673,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-Jn-ZWm">
-                                <rect key="frame" x="166" y="401" width="42" height="30"/>
+                                <rect key="frame" x="166" y="268" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pause"/>
                                 <connections>
@@ -671,7 +681,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips for Brewing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUX-XU-aFw">
-                                <rect key="frame" x="16" y="85" width="130" height="21"/>
+                                <rect key="frame" x="16" y="439" width="130" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -679,7 +689,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-an-Vfg">
-                                <rect key="frame" x="16" y="114" width="343" height="180"/>
+                                <rect key="frame" x="16" y="468" width="343" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">1. Ensure water is around 195 - 208 degrees for optimal temperature
@@ -689,12 +699,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bloom Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2e-Rd-XD2">
+                                <rect key="frame" x="142" y="94" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-fN-pqf">
+                                <rect key="frame" x="137" y="193" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.75686274509803919" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="3Ma-fN-pqf" firstAttribute="centerX" secondItem="fFv-st-2EG" secondAttribute="centerX" id="3Pk-8g-HXR"/>
-                            <constraint firstItem="3Ma-fN-pqf" firstAttribute="centerY" secondItem="fFv-st-2EG" secondAttribute="centerY" id="Red-uh-0bk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Aec-NZ-iyT"/>
                     </view>
                     <navigationItem key="navigationItem" title="AeroPress" id="iUd-dM-R8W">
@@ -708,7 +728,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fv9-Ig-RKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2562.4000000000001" y="2429.2353823088456"/>
+            <point key="canvasLocation" x="-3502" y="2428"/>
         </scene>
         <!--Hario V60-->
         <scene sceneID="Azw-uD-2CY">
@@ -757,6 +777,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kT0-Eh-dva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1774" y="2429"/>
+        </scene>
+        <!--Cold Brew-->
+        <scene sceneID="zYl-Vs-Y6c">
+            <objects>
+                <viewController id="usU-ZX-WOZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xuF-zO-8e5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.87627029420000002" green="0.78297621009999996" blue="0.7061322927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dnZ-uB-Ywt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cold Brew" id="QuW-yn-J56"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7R-II-ous" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="2429"/>
         </scene>
         <!--Discover-->
         <scene sceneID="wg7-f3-ORb">
