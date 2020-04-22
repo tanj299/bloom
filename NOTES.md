@@ -28,3 +28,24 @@
     - Go to your UITabBarController Scene (like the Brew Scene) and select it, then go to Editor -> Embed In -> Navigation Controller
     - Go back to your scene (Brew Scene) and CTRL + Drag the button to hook it up to the controller
         - Create a **Show** segue and give it an identifier, AeroPress
+
+
+when app opens
+- start should be available, 
+- pause should be disabled, 
+- reset should be enabled
+
+when start is pressed
+- start should be disabled
+- pause should be enabled
+- reset should be enabled
+
+when pause is pressed
+- pause should change to resume 
+- reset should be enabled
+- start should be disabled 
+
+when reset is pressed 
+- pause should reset to pause
+- start should be enabled
+- pause should be enabled
