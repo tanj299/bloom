@@ -29,6 +29,12 @@
     - Go back to your scene (Brew Scene) and CTRL + Drag the button to hook it up to the controller
         - Create a **Show** segue and give it an identifier, AeroPress
 
+- Singleton Pattern: 
+    - Object is instantiated ONCE and made static so all classes will have access to it during its lifetime
+
+- AeroPress Procedure
+1. Pour water and bloom 
+
 
 when app opens
 - start should be available, 

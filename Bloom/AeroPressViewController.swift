@@ -16,10 +16,10 @@ class AeroPressViewController: UIViewController {
 //********************************************************************************
     
     @IBOutlet weak var timerLabel: UILabel!
-    
+        
     // Variable will hold starting value of timer
     // Can change to any amount above 0
-    var seconds = 5
+    var seconds = 30
     var timer = Timer()
     
     // Ensures that only one timer is created at a time
@@ -28,6 +28,7 @@ class AeroPressViewController: UIViewController {
     
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var steps: UIView!
     
 //********************************************************************************
 // @IBActions
