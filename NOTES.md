@@ -46,11 +46,15 @@
         ```
     - To use an optional, you must **unwrap** the optional using **!** operator
     - There's a few ways to unwrap optionals: 
-    1. Use *forced unwrapping* using `!` 
-    2. Use *optional binding* using `if let`
-    3. Use *implicitly unwrapped optionals* using `!`
+        1. Use *forced unwrapping* using `!` 
+        2. Use *optional binding* using `if let`
+        3. Use *implicitly unwrapped optionals* using `!`
     -  ```
         let email:String? =   "johndoe@gmail.com"
+        
+        if email != nil {
+            print(email!)
+        }
         ```
 
 AeroPress Procedure:
