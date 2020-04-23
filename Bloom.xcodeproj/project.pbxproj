@@ -14,6 +14,9 @@
 		640132E8243FA1C400D2479B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640132E7243FA1C400D2479B /* Assets.xcassets */; };
 		640132EB243FA1C400D2479B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640132E9243FA1C400D2479B /* LaunchScreen.storyboard */; };
 		64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64133C0D243FB6660037231F /* DiscoverViewController.swift */; };
+		649565EF245208ED007C49C8 /* PlacePlungerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */; };
+		649565F1245209E5007C49C8 /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649565F0245209E5007C49C8 /* WaitViewController.swift */; };
+		649565F3245209F2007C49C8 /* PressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649565F2245209F2007C49C8 /* PressViewController.swift */; };
 		64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1C593244B98600045F861 /* AeroPressViewController.swift */; };
 		64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F54824476B3700CC079A /* InventoryViewController.swift */; };
 		64FAD0F6245121A000DA02A4 /* StirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAD0F5245121A000DA02A4 /* StirViewController.swift */; };
@@ -31,6 +34,9 @@
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		6494C387244F8AE60035D371 /* ScrapCode.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ScrapCode.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePlungerViewController.swift; sourceTree = "<group>"; };
+		649565F0245209E5007C49C8 /* WaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
+		649565F2245209F2007C49C8 /* PressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressViewController.swift; sourceTree = "<group>"; };
 		64B1C593244B98600045F861 /* AeroPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroPressViewController.swift; sourceTree = "<group>"; };
 		64C1F54824476B3700CC079A /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		64C1F54C2447D26300CC079A /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
@@ -69,20 +75,31 @@
 		640132DB243FA1C100D2479B /* Bloom */ = {
 			isa = PBXGroup;
 			children = (
+				649565F624520A4D007C49C8 /* AeroPress */,
 				640132E7243FA1C400D2479B /* Assets.xcassets */,
 				640132DC243FA1C100D2479B /* AppDelegate.swift */,
 				640132DE243FA1C100D2479B /* SceneDelegate.swift */,
 				640132E0243FA1C100D2479B /* BrewViewController.swift */,
 				64C1F54824476B3700CC079A /* InventoryViewController.swift */,
 				64133C0D243FB6660037231F /* DiscoverViewController.swift */,
-				64B1C593244B98600045F861 /* AeroPressViewController.swift */,
-				64FAD0F5245121A000DA02A4 /* StirViewController.swift */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
 				6494C387244F8AE60035D371 /* ScrapCode.playground */,
 				640132EC243FA1C400D2479B /* Info.plist */,
 			);
 			path = Bloom;
+			sourceTree = "<group>";
+		};
+		649565F624520A4D007C49C8 /* AeroPress */ = {
+			isa = PBXGroup;
+			children = (
+				64B1C593244B98600045F861 /* AeroPressViewController.swift */,
+				64FAD0F5245121A000DA02A4 /* StirViewController.swift */,
+				649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */,
+				649565F0245209E5007C49C8 /* WaitViewController.swift */,
+				649565F2245209F2007C49C8 /* PressViewController.swift */,
+			);
+			path = AeroPress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,12 +173,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649565EF245208ED007C49C8 /* PlacePlungerViewController.swift in Sources */,
 				64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */,
 				640132E1243FA1C100D2479B /* BrewViewController.swift in Sources */,
 				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
 				64FAD0F6245121A000DA02A4 /* StirViewController.swift in Sources */,
+				649565F1245209E5007C49C8 /* WaitViewController.swift in Sources */,
 				640132DD243FA1C100D2479B /* AppDelegate.swift in Sources */,
 				64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */,
+				649565F3245209F2007C49C8 /* PressViewController.swift in Sources */,
 				640132DF243FA1C100D2479B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

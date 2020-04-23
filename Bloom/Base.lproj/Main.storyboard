@@ -691,14 +691,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="With your grinded beans inside the chamber, pour water and let bloom for 30 seconds" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKp-2b-8eK">
-                                <rect key="frame" x="66" y="469" width="240.00000000000045" height="63.999999999999091"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Temp: 195° - 208°" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0GE-7X-1av">
                                 <rect key="frame" x="199" y="391" width="160" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -727,6 +719,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="With your grinded beans inside the chamber, pour water for 10 seconds" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nKp-2b-8eK">
+                                <rect key="frame" x="77" y="480" width="220" height="66.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.9137254901960784" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Aec-NZ-iyT"/>
@@ -744,7 +744,7 @@
                         <outlet property="startButton" destination="PQa-gT-k80" id="vhh-uu-kze"/>
                         <outlet property="steps" destination="nKp-2b-8eK" id="aCk-Hy-cqM"/>
                         <outlet property="timerLabel" destination="3Ma-fN-pqf" id="JEt-kn-Ixp"/>
-                        <segue destination="6Up-xO-084" kind="show" identifier="brewTime" id="hOG-WU-B7k"/>
+                        <segue destination="6Up-xO-084" kind="show" identifier="stir" id="hOG-WU-B7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fv9-Ig-RKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -855,14 +855,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Stir for 15 seconds " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GD2-Dr-kri">
-                                <rect key="frame" x="66" y="469" width="240.00000000000045" height="63.999999999999091"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-Gf-gg7">
                                 <rect key="frame" x="67" y="156" width="240" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -884,8 +876,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Stir coffee grinds for 15 seconds and bloom" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="edF-u9-JEA">
+                                <rect key="frame" x="77" y="480" width="220" height="66.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="WaitViewController"/>
                         <viewLayoutGuide key="safeArea" id="pwb-8e-wjl"/>
                     </view>
@@ -900,18 +900,19 @@
                     <connections>
                         <outlet property="pauseButton" destination="s8B-cL-0IU" id="G2q-bO-Cq1"/>
                         <outlet property="startButton" destination="MpY-NT-fjp" id="bSY-FH-pz6"/>
+                        <outlet property="steps" destination="edF-u9-JEA" id="mpM-hf-GsL"/>
                         <outlet property="stirTimerLabel" destination="Qdd-Gf-gg7" id="neZ-qU-dSv"/>
-                        <segue destination="xvg-mc-weT" kind="show" id="BBd-5H-ghW"/>
+                        <segue destination="xvg-mc-weT" kind="show" identifier="placePlunger" id="BBd-5H-ghW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Puv-rO-oWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4241" y="2504"/>
         </scene>
-        <!--View Controller-->
+        <!--Place Plunger View Controller-->
         <scene sceneID="IQJ-NB-oId">
             <objects>
-                <viewController id="xvg-mc-weT" sceneMemberID="viewController">
+                <viewController id="xvg-mc-weT" customClass="PlacePlungerViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eb9-sm-VLK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -921,7 +922,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="start:" destination="6Up-xO-084" eventType="touchUpInside" id="qz5-mQ-ruu"/>
+                                    <action selector="start:" destination="xvg-mc-weT" eventType="touchUpInside" id="RVd-ix-FUF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-hj-7yp">
@@ -931,7 +932,7 @@
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="reset" destination="6Up-xO-084" eventType="touchUpInside" id="9Yc-ju-gvu"/>
+                                    <action selector="reset" destination="xvg-mc-weT" eventType="touchUpInside" id="lRI-Cj-EDC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO4-y6-NfO">
@@ -939,7 +940,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pause"/>
                                 <connections>
-                                    <action selector="pause" destination="6Up-xO-084" eventType="touchUpInside" id="aHX-uJ-o4T"/>
+                                    <action selector="pause" destination="xvg-mc-weT" eventType="touchUpInside" id="hds-uI-HoK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place Plunger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imn-an-cbh">
@@ -1033,8 +1034,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Place plunger onto AeroPress" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EEV-fV-4Hn">
+                                <rect key="frame" x="77" y="480" width="220" height="66.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="sNR-vV-XXf"/>
                     </view>
                     <navigationItem key="navigationItem" id="MWn-vl-qzV">
@@ -1046,17 +1055,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="VdZ-4L-tSt" kind="show" id="Yao-SS-Ncv"/>
+                        <outlet property="pauseButton" destination="YO4-y6-NfO" id="AF5-7N-IfG"/>
+                        <outlet property="plungerTimerLabel" destination="wW9-Gn-98D" id="pGg-FX-bDF"/>
+                        <outlet property="startButton" destination="rah-X9-A26" id="QyO-dZ-JaO"/>
+                        <outlet property="steps" destination="EEV-fV-4Hn" id="AEm-uq-tqF"/>
+                        <segue destination="VdZ-4L-tSt" kind="show" identifier="wait" id="Yao-SS-Ncv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2z-ja-hVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3825" y="2585"/>
         </scene>
-        <!--View Controller-->
+        <!--Wait View Controller-->
         <scene sceneID="Qt9-KA-hOE">
             <objects>
-                <viewController id="VdZ-4L-tSt" sceneMemberID="viewController">
+                <viewController id="VdZ-4L-tSt" customClass="WaitViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8dU-RL-lEm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1066,7 +1079,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="start:" destination="6Up-xO-084" eventType="touchUpInside" id="GLy-qf-Za9"/>
+                                    <action selector="start:" destination="VdZ-4L-tSt" eventType="touchUpInside" id="SlC-j3-rvv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3J-4U-sWz">
@@ -1076,7 +1089,7 @@
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="reset" destination="6Up-xO-084" eventType="touchUpInside" id="lYR-wf-8zl"/>
+                                    <action selector="reset" destination="VdZ-4L-tSt" eventType="touchUpInside" id="6j2-Zv-GMI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNF-zc-NTk">
@@ -1084,7 +1097,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pause"/>
                                 <connections>
-                                    <action selector="pause" destination="6Up-xO-084" eventType="touchUpInside" id="a9S-xR-SKX"/>
+                                    <action selector="pause" destination="VdZ-4L-tSt" eventType="touchUpInside" id="r7g-hv-v30"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wait" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeN-T0-joS">
@@ -1178,8 +1191,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Wait for 45 seconds to steep" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YPp-gF-4i8">
+                                <rect key="frame" x="77" y="480" width="220" height="66.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kSd-xA-rQP"/>
                     </view>
                     <navigationItem key="navigationItem" id="lh9-CB-Ejg">
@@ -1191,17 +1212,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="JQg-5r-q9o" kind="show" id="fXm-fK-OZN"/>
+                        <outlet property="pauseButton" destination="gNF-zc-NTk" id="zNJ-8R-0h8"/>
+                        <outlet property="startButton" destination="Krk-bS-sjb" id="eMA-Hm-10h"/>
+                        <outlet property="steps" destination="YPp-gF-4i8" id="Y6F-j4-CMS"/>
+                        <outlet property="waitTimerLabel" destination="Cup-Rk-myF" id="CGG-Xu-0aX"/>
+                        <segue destination="JQg-5r-q9o" kind="show" identifier="press" id="fXm-fK-OZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2n-oF-3dF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3486" y="2634"/>
         </scene>
-        <!--View Controller-->
+        <!--Press View Controller-->
         <scene sceneID="7o1-m8-Mec">
             <objects>
-                <viewController id="JQg-5r-q9o" sceneMemberID="viewController">
+                <viewController id="JQg-5r-q9o" customClass="PressViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nko-DY-EEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1211,7 +1236,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="start:" destination="6Up-xO-084" eventType="touchUpInside" id="Mk1-Lq-6t0"/>
+                                    <action selector="start:" destination="JQg-5r-q9o" eventType="touchUpInside" id="Zzu-gg-Hym"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le7-Eg-4R9">
@@ -1221,7 +1246,7 @@
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="reset" destination="6Up-xO-084" eventType="touchUpInside" id="5Fl-K2-sjV"/>
+                                    <action selector="reset" destination="JQg-5r-q9o" eventType="touchUpInside" id="pZd-Q3-KNO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkJ-6c-Lqx">
@@ -1229,7 +1254,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pause"/>
                                 <connections>
-                                    <action selector="pause" destination="6Up-xO-084" eventType="touchUpInside" id="z5z-wc-SqQ"/>
+                                    <action selector="pause" destination="JQg-5r-q9o" eventType="touchUpInside" id="YLL-ZX-GUu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUF-WC-6LV">
@@ -1323,15 +1348,35 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Press for 30 seconds" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o2R-jZ-uce">
+                                <rect key="frame" x="77" y="480" width="220" height="66.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9NQ-9P-ijT"/>
                     </view>
                     <navigationItem key="navigationItem" id="ctS-uV-7Gy">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="26P-Yn-kw6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="26P-Yn-kw6">
+                            <connections>
+                                <action selector="done:" destination="JQg-5r-q9o" id="deZ-1y-qlu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pauseButton" destination="OkJ-6c-Lqx" id="cnN-UY-nvZ"/>
+                        <outlet property="pressTimerLabel" destination="746-Dl-uRu" id="Ybj-XW-7X2"/>
+                        <outlet property="startButton" destination="aMH-i1-GZL" id="4oO-k5-8Uq"/>
+                        <outlet property="steps" destination="o2R-jZ-uce" id="4Bs-Rj-lAn"/>
+                        <segue destination="NdU-p1-dRu" kind="unwind" identifier="unwindToAeroPress" unwindAction="brewDidFinish:" id="mcV-L6-AdU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddM-VP-m6L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NdU-p1-dRu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3177" y="2671"/>
         </scene>

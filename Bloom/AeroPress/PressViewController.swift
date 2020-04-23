@@ -1,35 +1,30 @@
 //
-//  AeroPressViewController.swift
+//  PressViewController.swift
 //  Bloom
 //
-//  Created by Jayson Tan on 4/18/20.
+//  Created by Jayson Tan on 4/23/20.
 //  Copyright © 2020 Jayson Tan. All rights reserved.
 //
 
-
-//  SN: Show alert when stuff is done brewing instead of every step!
-//  SN: Just vibrate the phone after every step
-
 import UIKit
-import AudioToolbox
+import AudioToolbox 
 
-class AeroPressViewController: UIViewController {
-    
+class PressViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        pauseButton.isEnabled = false
-        // Do any additional setup after loading the view.
     }
     
+
 //********************************************************************************
 // @IBOutlets
 //********************************************************************************
     
-    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var pressTimerLabel: UILabel!
         
     // Variable will hold starting value of timer
     // Can change to any amount above 0
-    var seconds = 3
+    var seconds = 2
     var timer = Timer()
     
     // Ensures that only one timer is created at a time
@@ -39,7 +34,7 @@ class AeroPressViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var steps: UIView!
-    
+        
 //********************************************************************************
 // @IBActions
 //********************************************************************************
@@ -69,14 +64,13 @@ class AeroPressViewController: UIViewController {
         if seconds < 1 {
             timer.invalidate()
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-//            showAlert()
-            self.performSegue(withIdentifier: "brewTime", sender: self)
+            showAlert()
         }
         else {
             // Decrement timer countdown by seconds
             seconds -= 1
             // Update the label
-            timerLabel.text = timeString(time: TimeInterval(seconds))
+            pressTimerLabel.text = timeString(time: TimeInterval(seconds))
         }
     }
     
@@ -103,8 +97,8 @@ class AeroPressViewController: UIViewController {
     
     @IBAction func reset() {
         timer.invalidate()
-        seconds = 3
-        timerLabel.text = timeString(time: TimeInterval(seconds))
+        seconds = 2
+        pressTimerLabel.text = timeString(time: TimeInterval(seconds))
         
         // Prevent Timer from restarting
         isTimerRunning = false
@@ -126,15 +120,19 @@ class AeroPressViewController: UIViewController {
         return String(format: "%02i : %02i : %02i", hours, minutes, seconds)
     }
     
+    // Unwind final ViewController back to initial ViewController
+    // `AeroPress` in this case
+    @IBAction func done(_ sender: Any) {
+        self.performSegue(withIdentifier: "unwindToAeroPress", sender: self)
+    }
 
 //********************************************************************************
 // @UIAlert
 //********************************************************************************
     @IBAction func showAlert () {
-        let alert = UIAlertController(title: "Bloom", message: "Bloom finished!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Done", message: "Brew finished!", preferredStyle: .alert)
         let yes = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(yes)
         self.present(alert, animated: true)
     }
-    
 }

@@ -1,48 +1,53 @@
 //
-//  WaitViewController.swift
+//  AeroPressViewController.swift
 //  Bloom
 //
-//  Created by Jayson Tan on 4/22/20.
+//  Created by Jayson Tan on 4/18/20.
 //  Copyright © 2020 Jayson Tan. All rights reserved.
 //
+
+
+//  SN: Show alert when stuff is done brewing instead of every step!
+//  SN: Just vibrate the phone after every step
 
 import UIKit
 import AudioToolbox
 
-class StirViewController: UIViewController {
+class AeroPressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        pauseButton.isEnabled = false
+        pauseButton.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var stirTimerLabel: UILabel!
+//********************************************************************************
+// @IBOutlets
+//********************************************************************************
     
-      
-    //********************************************************************************
-    // @IBOutlets
-    //********************************************************************************
+    @IBOutlet weak var timerLabel: UILabel!
         
-//        @IBOutlet weak var timerLabel: UILabel!
-            
-        // Variable will hold starting value of timer
-        // Can change to any amount above 0
-        var seconds = 15
-        var timer = Timer()
-        
-        // Ensures that only one timer is created at a time
-        var isTimerRunning = false
-        var isPaused = false
-        
-        @IBOutlet weak var pauseButton: UIButton!
-        @IBOutlet weak var startButton: UIButton!
-        @IBOutlet weak var steps: UIView!
-        
+    // Variable will hold starting value of timer
+    // Can change to any amount above 0
+    var seconds = 3
+    var timer = Timer()
+    
+    // Ensures that only one timer is created at a time
+    var isTimerRunning = false
+    var isPaused = false
+    
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var steps: UIView!
+    
 //********************************************************************************
 // @IBActions
 //********************************************************************************
-
+    
+    // Unwind to `AeroPress` page when finished
+    @IBAction func brewDidFinish(_ segue: UIStoryboardSegue) {
+    }
+    
     @IBAction func start(_ sender: UIButton) {
         // Checks if timer is running; fixes the timer counting down faster
         // Prevents new Timer object from being created on each tap of the button
@@ -69,13 +74,13 @@ class StirViewController: UIViewController {
             timer.invalidate()
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
 //            showAlert()
-//            self.performSegue(withIdentifier: "brewTime", sender: self)
+            self.performSegue(withIdentifier: "stir", sender: self)
         }
         else {
             // Decrement timer countdown by seconds
             seconds -= 1
             // Update the label
-            stirTimerLabel.text = timeString(time: TimeInterval(seconds))
+            timerLabel.text = timeString(time: TimeInterval(seconds))
         }
     }
     
@@ -102,8 +107,8 @@ class StirViewController: UIViewController {
     
     @IBAction func reset() {
         timer.invalidate()
-        seconds = 2
-        stirTimerLabel.text = timeString(time: TimeInterval(seconds))
+        seconds = 3
+        timerLabel.text = timeString(time: TimeInterval(seconds))
         
         // Prevent Timer from restarting
         isTimerRunning = false
@@ -135,6 +140,5 @@ class StirViewController: UIViewController {
         alert.addAction(yes)
         self.present(alert, animated: true)
     }
-        
+    
 }
-
