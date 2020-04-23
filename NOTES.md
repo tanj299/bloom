@@ -32,26 +32,19 @@
 - Singleton Pattern: 
     - Object is instantiated ONCE and made static so all classes will have access to it during its lifetime
 
-- AeroPress Procedure
-1. Pour water and bloom 
+- NSUnknownKeyExceptionError Fixes:
+    - Check your buttons / labels are connected to the correct ViewController
+    - Delete ViewControllers that are not associated with the current one
+
+- If ViewController keeps crashing, check that it is "Inherited from Target Module"
+
+AeroPress Procedure:
+Stump's AeroPress recipe
+- Pour Water: 10 seconds
+- Stir: 15 seconds
+- Place Plunger: 5 seconds
+- Wait: 45 seconds
+- Press: 30 seconds
 
 
-when app opens
-- start should be available, 
-- pause should be disabled, 
-- reset should be enabled
-
-when start is pressed
-- start should be disabled
-- pause should be enabled
-- reset should be enabled
-
-when pause is pressed
-- pause should change to resume 
-- reset should be enabled
-- start should be disabled 
-
-when reset is pressed 
-- pause should reset to pause
-- start should be enabled
-- pause should be enabled
+Exiting Using Unwind Segue: https://stackoverflow.com/questions/30052587/how-can-i-go-back-to-the-initial-view-controller-in-swift
