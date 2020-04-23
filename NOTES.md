@@ -47,4 +47,6 @@ Stump's AeroPress recipe
 - Press: 30 seconds
 
 
-Exiting Using Unwind Segue: https://stackoverflow.com/questions/30052587/how-can-i-go-back-to-the-initial-view-controller-in-swift
+[Exiting Using Unwind Segue:](https://stackoverflow.com/questions/30052587/how-can-i-go-back-to-the-initial-view-controller-in-swift)
+    - Put the unwind IBAction where you want to unwind TO in THAT ViewController 
+    - Ex: I want to unwind from finished brewing at "Press" step to the beginning step, "Pour Water." So I will put the unwind function IN "Pour Water"

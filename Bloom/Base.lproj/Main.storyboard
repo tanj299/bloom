@@ -1394,7 +1394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rp6-Sm-YuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2562" y="3108"/>
+            <point key="canvasLocation" x="-2172" y="3230"/>
         </scene>
         <!--Hario Technica-->
         <scene sceneID="fIX-cf-nZX">
@@ -1410,7 +1410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBy-Bs-tbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2562" y="3788"/>
+            <point key="canvasLocation" x="-2172" y="3910"/>
         </scene>
         <!--French Press-->
         <scene sceneID="ex2-En-Z03">
@@ -1426,7 +1426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kT0-Eh-dva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1774" y="2429"/>
+            <point key="canvasLocation" x="-602" y="2427"/>
         </scene>
         <!--Cold Brew-->
         <scene sceneID="zYl-Vs-Y6c">
@@ -1442,7 +1442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7R-II-ous" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-892" y="2429"/>
+            <point key="canvasLocation" x="330" y="2426"/>
         </scene>
         <!--Discover-->
         <scene sceneID="wg7-f3-ORb">
@@ -1587,7 +1587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yX3-XK-idg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2562" y="4482"/>
+            <point key="canvasLocation" x="-2172" y="4603"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

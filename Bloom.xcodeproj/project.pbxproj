@@ -75,13 +75,13 @@
 		640132DB243FA1C100D2479B /* Bloom */ = {
 			isa = PBXGroup;
 			children = (
-				649565F624520A4D007C49C8 /* AeroPress */,
 				640132E7243FA1C400D2479B /* Assets.xcassets */,
 				640132DC243FA1C100D2479B /* AppDelegate.swift */,
 				640132DE243FA1C100D2479B /* SceneDelegate.swift */,
 				640132E0243FA1C100D2479B /* BrewViewController.swift */,
 				64C1F54824476B3700CC079A /* InventoryViewController.swift */,
 				64133C0D243FB6660037231F /* DiscoverViewController.swift */,
+				649565F624520A4D007C49C8 /* AeroPress */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
 				6494C387244F8AE60035D371 /* ScrapCode.playground */,
