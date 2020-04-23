@@ -38,6 +38,21 @@
 
 - If ViewController keeps crashing, check that it is "Inherited from Target Module"
 
+- Optionals:
+    - **?** means the variable is an optional
+    - ```
+        let name:String? = nil
+        print(name) // -> nil
+        ```
+    - To use an optional, you must **unwrap** the optional using **!** operator
+    - There's a few ways to unwrap optionals: 
+    1. Use *forced unwrapping* using `!` 
+    2. Use *optional binding* using `if let`
+    3. Use *implicitly unwrapped optionals* using `!`
+    -  ```
+        let email:String? =   "johndoe@gmail.com"
+        ```
+
 AeroPress Procedure:
 Stump's AeroPress recipe
 - Pour Water: 10 seconds
