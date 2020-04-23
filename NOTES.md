@@ -47,15 +47,28 @@
     - To use an optional, you must **unwrap** the optional using **!** operator
     - There's a few ways to unwrap optionals: 
         1. Use *forced unwrapping* using `!` 
+            - ```
+                let email:String? =   "johndoe@gmail.com"
+                
+                if email != nil {
+                    print(email!)
+                }
+                ```
         2. Use *optional binding* using `if let`
+            - ```
+                let optionalUserName:String? = "johndoe"
+                
+                // If optionalUserName is not nil, 
+                // then we user optional binding assign it to username
+                if let username = optionalUserName {
+                    print(username)
+                }
+                ```
         3. Use *implicitly unwrapped optionals* using `!`
-    -  ```
-        let email:String? =   "johndoe@gmail.com"
-        
-        if email != nil {
-            print(email!)
-        }
-        ```
+            - Implicitly unwrapped optionals don't have to be unwrapped to use them
+            - However, MUST be certain that the optional value is NOT nil
+            - `@IBOutlet weak var userNameField:UITextField?`
+    -  
 
 AeroPress Procedure:
 Stump's AeroPress recipe
