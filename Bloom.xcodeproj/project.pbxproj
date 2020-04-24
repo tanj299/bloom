@@ -35,7 +35,6 @@
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		643AA8AB2452424600B2FB66 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		6494C387244F8AE60035D371 /* ScrapCode.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ScrapCode.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePlungerViewController.swift; sourceTree = "<group>"; };
 		649565F0245209E5007C49C8 /* WaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
 		649565F2245209F2007C49C8 /* PressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +86,6 @@
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				643AA8AB2452424600B2FB66 /* URLSession.swift */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
-				6494C387244F8AE60035D371 /* ScrapCode.playground */,
 				640132EC243FA1C400D2479B /* Info.plist */,
 			);
 			path = Bloom;
