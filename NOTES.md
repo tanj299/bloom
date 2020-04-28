@@ -82,3 +82,8 @@ Stump's AeroPress recipe
 [Exiting Using Unwind Segue:](https://stackoverflow.com/questions/30052587/how-can-i-go-back-to-the-initial-view-controller-in-swift)
     - Put the unwind IBAction where you want to unwind TO in THAT ViewController 
     - Ex: I want to unwind from finished brewing at "Press" step to the beginning step, "Pour Water." So I will put the unwind function IN "Pour Water"
+
+- To Embed View so all elements remain consistent:
+    - Highlight all the buttons / labels / etc. and go to Editor -> Embed In -> View OR View Inset (removes inset) 
+    - Optionally, if the view is created, click on the View and just Embed In -> View / View Inset
+    - Add Constraint to WIDTH (since for example, the Brew view already had all the constraints set up for Scroll View, I had to add constraint to Width only and add the missing constraints later)

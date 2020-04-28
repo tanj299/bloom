@@ -19,13 +19,14 @@
                             <userLayoutGuide location="19" affinity="maxX"/>
                         </userGuides>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaO-l5-f29">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaO-l5-f29">
                                 <rect key="frame" x="168" y="64" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWL-Oy-QFt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWL-Oy-QFt">
                                 <rect key="frame" x="0.0" y="93" width="375" height="525"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-me-WOB">
@@ -563,35 +564,18 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Rs4-dI-LHx"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="QV6-1n-HRz"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOM-e1-Gif">
-                                <rect key="frame" x="287" y="59" width="68" height="30"/>
-                                <state key="normal" title="Brew Test"/>
-                                <connections>
-                                    <action selector="brewTest" destination="9pv-A4-QxB" eventType="touchUpInside" id="O4C-ZK-w9B"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.9137254901960784" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nOM-e1-Gif" firstAttribute="leading" secondItem="KaO-l5-f29" secondAttribute="trailing" constant="80" id="4e6-ZD-gwU"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="nOM-e1-Gif" secondAttribute="trailing" constant="20" id="5Bi-Rk-IKH"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Aef-N5-7oT"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="BGa-Gf-ZBu"/>
-                            <constraint firstItem="KaO-l5-f29" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="168" id="Bxc-iJ-mRL"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="D8Y-Kp-VrT"/>
-                            <constraint firstItem="HWL-Oy-QFt" firstAttribute="top" secondItem="nOM-e1-Gif" secondAttribute="bottom" constant="4" id="DtA-50-2mn"/>
-                            <constraint firstItem="KaO-l5-f29" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="20" id="Hxj-cJ-cMF"/>
-                            <constraint firstItem="HWL-Oy-QFt" firstAttribute="top" secondItem="KaO-l5-f29" secondAttribute="bottom" constant="8" id="IDP-sC-vdW"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="JO5-fl-f2w"/>
-                            <constraint firstItem="HWL-Oy-QFt" firstAttribute="top" secondItem="nOM-e1-Gif" secondAttribute="bottom" constant="4" id="KXz-ZK-pDE"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="Q3k-St-wa2"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="TAk-Bk-Usb"/>
-                            <constraint firstItem="nOM-e1-Gif" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="15" id="ZR3-zp-SOg"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="bI3-FN-CJa"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="d1k-oR-Gne"/>
                             <constraint firstItem="HWL-Oy-QFt" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="d5g-bW-nQR"/>
-                            <constraint firstItem="nOM-e1-Gif" firstAttribute="leading" secondItem="KaO-l5-f29" secondAttribute="trailing" constant="80" id="of1-97-i7z"/>
-                            <constraint firstItem="HWL-Oy-QFt" firstAttribute="top" secondItem="nOM-e1-Gif" secondAttribute="bottom" constant="4" id="tQR-Uf-jKF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -600,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-892" y="1577"/>
+            <point key="canvasLocation" x="-892" y="1576.4617691154424"/>
         </scene>
         <!--AeroPress-->
         <scene sceneID="RIC-bE-oI3">
@@ -1437,7 +1421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kT0-Eh-dva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602" y="2427"/>
+            <point key="canvasLocation" x="-892" y="2427"/>
         </scene>
         <!--Cold Brew-->
         <scene sceneID="zYl-Vs-Y6c">
@@ -1453,7 +1437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7R-II-ous" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="2426"/>
+            <point key="canvasLocation" x="39" y="2427"/>
         </scene>
         <!--Discover-->
         <scene sceneID="wg7-f3-ORb">
