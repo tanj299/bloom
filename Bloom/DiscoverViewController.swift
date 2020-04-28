@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
+import CoreGraphics
+import Foundation
+
 
 class DiscoverViewController: UIViewController {
 
