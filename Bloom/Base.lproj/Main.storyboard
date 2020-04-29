@@ -1461,10 +1461,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-By-Xwm">
-                                <rect key="frame" x="0.0" y="60.5" width="375" height="560"/>
+                                <rect key="frame" x="0.0" y="60.5" width="375" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="613-RI-OLj"/>
-                                    <constraint firstAttribute="height" constant="560" id="yFM-Rs-Aib"/>
+                                    <constraint firstAttribute="height" constant="400" id="XQF-5q-HhP"/>
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCy-1t-HjS">
@@ -1474,18 +1474,57 @@
                                     <action selector="getLocation" destination="8rJ-Kc-sve" eventType="touchUpInside" id="EXx-9e-5Pd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-3u-KRQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-3u-KRQ">
                                 <rect key="frame" x="20" y="15" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cafes"/>
                                 <connections>
                                     <action selector="cafe" destination="8rJ-Kc-sve" eventType="touchUpInside" id="gZW-Vh-A3N"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smg-1m-fGR">
+                                <rect key="frame" x="42" y="480" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-9I-J2p">
+                                <rect key="frame" x="42" y="509" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lT-N7-URv">
+                                <rect key="frame" x="42" y="540" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-sr-rBk">
+                                <rect key="frame" x="42" y="569" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-Pe-9KM">
+                                <rect key="frame" x="298" y="564" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAX-xk-QzY">
+                                <rect key="frame" x="298" y="526" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tag"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2Dc-Cg-e77" firstAttribute="leading" secondItem="uMd-3u-KRQ" secondAttribute="trailing" constant="94" id="FcW-h4-kDk"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="2Dc-Cg-e77" secondAttribute="trailing" constant="154" id="GQA-4v-nGA"/>
+                            <constraint firstItem="uMd-3u-KRQ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="LeQ-Bv-sK2"/>
                             <constraint firstItem="sCy-1t-HjS" firstAttribute="leading" secondItem="2Dc-Cg-e77" secondAttribute="trailing" constant="50" id="Rjb-tH-ddT"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="sCy-1t-HjS" secondAttribute="trailing" constant="20" id="dnv-17-bB9"/>
                             <constraint firstItem="2Dc-Cg-e77" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="154" id="gZ2-Ez-iL6"/>
@@ -1494,13 +1533,20 @@
                             <constraint firstItem="H3u-By-Xwm" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="lDE-og-aMd"/>
                             <constraint firstItem="2Dc-Cg-e77" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="20" id="nAH-vd-vIy"/>
                             <constraint firstItem="H3u-By-Xwm" firstAttribute="top" secondItem="2Dc-Cg-e77" secondAttribute="bottom" constant="20" id="rx6-Al-Jre"/>
+                            <constraint firstItem="uMd-3u-KRQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="waB-C2-qEZ"/>
                             <constraint firstItem="sCy-1t-HjS" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="xNj-Jo-MY5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discover" image="globe" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="addressLabel" destination="TZf-sr-rBk" id="ioc-v6-bqB"/>
+                        <outlet property="getButton" destination="sCy-1t-HjS" id="kAo-BL-hiG"/>
+                        <outlet property="latitudeLabel" destination="jjX-9I-J2p" id="5vB-Nz-3Ke"/>
+                        <outlet property="longitudeLabel" destination="5lT-N7-URv" id="QOO-Cd-Zwy"/>
                         <outlet property="mapView" destination="H3u-By-Xwm" id="d5o-Ko-QmB"/>
+                        <outlet property="messageLabel" destination="Smg-1m-fGR" id="lPd-wc-ifU"/>
+                        <outlet property="tagButton" destination="gAX-xk-QzY" id="048-ef-2yN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

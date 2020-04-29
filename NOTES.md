@@ -87,3 +87,5 @@ Stump's AeroPress recipe
     - Highlight all the buttons / labels / etc. and go to Editor -> Embed In -> View OR View Inset (removes inset) 
     - Optionally, if the view is created, click on the View and just Embed In -> View / View Inset
     - Add Constraint to WIDTH (since for example, the Brew view already had all the constraints set up for Scroll View, I had to add constraint to Width only and add the missing constraints later)
+
+
