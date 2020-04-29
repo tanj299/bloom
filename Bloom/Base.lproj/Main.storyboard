@@ -1474,6 +1474,14 @@
                                     <action selector="getLocation" destination="8rJ-Kc-sve" eventType="touchUpInside" id="EXx-9e-5Pd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-3u-KRQ">
+                                <rect key="frame" x="20" y="15" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cafes"/>
+                                <connections>
+                                    <action selector="cafe" destination="8rJ-Kc-sve" eventType="touchUpInside" id="gZW-Vh-A3N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

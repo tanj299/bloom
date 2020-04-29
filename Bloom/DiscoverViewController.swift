@@ -15,6 +15,8 @@ import Foundation
 // NOTE: Location spoofing has been moved to `Features` in update
 // To spoof location, go to Simulator -> Features -> Location -> Apple (or whatever)
 
+let key = Key.Google.placesKey
+
 class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
@@ -23,6 +25,7 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     let locationManager = CLLocationManager()
     
     @IBAction func getLocation() {
+        // print("Key is: ", Key.Google.placesKey)
         
         // Authorization for permission
         let authStatus = CLLocationManager.authorizationStatus()
@@ -49,8 +52,14 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
         centerOnLocation()
     }
     
+    @IBAction func cafe() {
+        return
+    }
+    
     // MARK: - Map View
-    let regionRadius: Double = 1000
+    let regionRadius: Double = 500
+    
+    // Center onto current location
     func centerOnLocation () {
         guard let coordinate = locationManager.location?.coordinate else {return}
         let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
@@ -92,7 +101,7 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        centerOnLocation()
         // Do any additional setup after loading the view.
     }
 }
