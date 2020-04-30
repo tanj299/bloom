@@ -88,4 +88,21 @@ Stump's AeroPress recipe
     - Optionally, if the view is created, click on the View and just Embed In -> View / View Inset
     - Add Constraint to WIDTH (since for example, the Brew view already had all the constraints set up for Scroll View, I had to add constraint to Width only and add the missing constraints later)
 
+- Go through Chapter 34 to learn map views correctly
+    - Learn to add pins to places
+
+- Steps for `Discover`
+1. Use URLSession to fetch places from Google Places API
+2. Use current location of user and pass the following to the URL to find places:
+    - Use a [Nearby Search requests](https://developers.google.com/places/web-service/search#PlaceSearchRequests)
+        - Sample HTTP URL: <https://maps.googleapis.com/maps/api/place/nearbysearch/output?parameters>
+    - Coordinates: User's location
+    - Radius: The radius you want to search within
+    - Type: This is going to be `cafe`. For more types, <https://developers.google.com/places/supported_types>
+3. Query the JSON and add these locations to an array
+4. Use Chapter 34 as a reference to query array of locations and pin on map
+
+- Steps for `Inventory`
+1. Create Table View to add inventory
+2. Refer to Chapter 30 for tapable cells and array to store locations
 

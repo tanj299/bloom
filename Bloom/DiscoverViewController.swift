@@ -16,6 +16,8 @@ import Foundation
 // To spoof location, go to Simulator -> Features -> Location -> Apple (or whatever)
 // If there is no annotation(the blue dot that indicates your location), simulate location
 // Hunter College Coordinates: 40.767954, -73.964572
+// Sample Query for `cafe` near Hunter College: Radius: 200m, Type: cafe
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.767954,-73.964572&radius=200&type=cafe&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
 
 let key = Key.Google.placesKey
 
@@ -112,7 +114,7 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     // MARK: - Map View and Function
     let regionRadius: Double = 500
     
-    // Center onto current location
+    // Center onto user's current location in MapView
     func centerOnLocation () {
         guard let coordinate = locationManager.location?.coordinate else {return}
         let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
@@ -185,6 +187,7 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation = locations.last!
+        print("Delete later: This is the last location found: \(newLocation)")
         print("didUpdatedLocations \(newLocation)")
         
         if newLocation.timestamp.timeIntervalSinceNow < -5 {
