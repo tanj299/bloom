@@ -16,7 +16,17 @@ class CoffeeDetailViewController: UIViewController {
     // Coffee Name text field
     @IBOutlet weak var coffeeName: UITextField!
     @IBOutlet weak var dateRoasted: UITextField!
-
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBAction func datePickerChanged(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datePicker.date)
+        dateRoasted.text = strDate
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +40,11 @@ class CoffeeDetailViewController: UIViewController {
             name = coffeeName.text!
             date = dateRoasted.text!
         }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
 
 }

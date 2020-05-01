@@ -79,10 +79,10 @@ class InventoryViewController: UITableViewController {
         tableView.deleteRows(at: indexPaths, with: .fade)
         
         PersistencyHelper.saveBeanInventory(coffeeInventory)
-
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "coffeeDetails", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
