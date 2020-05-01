@@ -15,7 +15,9 @@
 
 - To center font in UIButton using Storyboard or Programmatically:
     - [Reference](https://stackoverflow.com/questions/30679370/swift-uibutton-with-two-lines-of-text)
-    
+
+- To connect to proper view controllers, make sure your swift file inherits from the correct ViewControllers (ie. Inventory should inherit from UITableViewController, Brew should inherit from UIViewController)
+
 - To use Scroll View properly, objects MUST be constrained to the parent view
     - [Tutorial](https://medium.com/@pradeep_chauhan/how-to-configure-a-uiscrollview-with-auto-layout-in-interface-builder-218dcb4022d7)
     - Ex: Consider three objects: ScrollView, View, and Button. The ScrollView is the "parent view",

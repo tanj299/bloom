@@ -1553,47 +1553,109 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="837.93103448275872"/>
         </scene>
-        <!--Inventory-->
-        <scene sceneID="xxw-yc-Amc">
+        <!--Coffee Beans-->
+        <scene sceneID="8AW-eN-lP6">
             <objects>
-                <viewController id="kdv-Cp-0ci" customClass="InventoryViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VD1-tD-Evo">
+                <tableViewController id="u6M-7N-9Eu" customClass="InventoryViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Iy-4i-H0u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <userGuides>
-                            <userLayoutGuide location="20" affinity="minX"/>
-                            <userLayoutGuide location="355" affinity="minX"/>
-                        </userGuides>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbW-cD-Q2h">
-                                <rect key="frame" x="258" y="16" width="97" height="30"/>
-                                <state key="normal" title="Inventory Test"/>
-                                <connections>
-                                    <action selector="inventoryTest" destination="kdv-Cp-0ci" eventType="touchUpOutside" id="4ia-fX-PB8"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zg-HF-8nY">
-                                <rect key="frame" x="152" y="20" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="5Zg-HF-8nY" firstAttribute="leading" secondItem="0P1-EI-9v6" secondAttribute="leading" constant="152" id="5WA-cb-VNS"/>
-                            <constraint firstItem="0P1-EI-9v6" firstAttribute="trailing" secondItem="AbW-cD-Q2h" secondAttribute="trailing" constant="20" id="7ud-Kr-i4l"/>
-                            <constraint firstItem="AbW-cD-Q2h" firstAttribute="top" secondItem="0P1-EI-9v6" secondAttribute="top" constant="16" id="Dji-AE-DmG"/>
-                            <constraint firstItem="5Zg-HF-8nY" firstAttribute="top" secondItem="0P1-EI-9v6" secondAttribute="top" constant="20" id="SJh-2L-Llt"/>
-                            <constraint firstItem="AbW-cD-Q2h" firstAttribute="leading" secondItem="5Zg-HF-8nY" secondAttribute="trailing" constant="35" id="SMf-RG-tns"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0P1-EI-9v6"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Inventory" image="folder" catalog="system" id="xKR-fM-OFS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5eV-ic-fdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeItem" id="YXf-We-n6c">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YXf-We-n6c" id="3yo-uh-kUB" customClass="CoffeeCellTableViewCell" customModule="Bloom" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-eB-m24" userLabel="coffeeNameLabel">
+                                            <rect key="frame" x="16" y="11" width="171" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJj-uM-B69" userLabel="dateLabel">
+                                            <rect key="frame" x="188" y="11" width="171" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u6M-7N-9Eu" id="8qh-vr-M9Z"/>
+                            <outlet property="delegate" destination="u6M-7N-9Eu" id="af5-mi-nNL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Coffee Beans" id="YcS-DP-qKX">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="mAY-jF-WRc">
+                            <connections>
+                                <segue destination="dz9-Nv-usM" kind="presentation" id="c3Y-G9-7vJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2lO-9J-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="838"/>
+            <point key="canvasLocation" x="1888.8" y="837.93103448275872"/>
+        </scene>
+        <!--Coffee Detail View Controller-->
+        <scene sceneID="ppN-tI-1De">
+            <objects>
+                <viewController id="dz9-Nv-usM" customClass="CoffeeDetailViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kxa-tD-IuA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-wg-5v8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Coffee Beans" id="ruP-sH-dVU">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hcQ-8H-KME">
+                                            <connections>
+                                                <segue destination="Vjl-UB-ldf" kind="unwind" identifier="cancelSegue" unwindAction="cancelWithSegue:" id="CVy-kO-Lwk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YWH-Pb-TPB">
+                                            <connections>
+                                                <action selector="done:" destination="Vjl-UB-ldf" id="I6M-KE-Qwy"/>
+                                                <segue destination="Vjl-UB-ldf" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="LTE-T3-Rh0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-LJ-GYb">
+                                <rect key="frame" x="16" y="78" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4t7-qG-xy4">
+                                <rect key="frame" x="16" y="120" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="y4v-u6-Yh4"/>
+                    </view>
+                    <connections>
+                        <outlet property="CoffeeName" destination="FdN-LJ-GYb" id="eU5-7H-7ol"/>
+                        <outlet property="dateRoasted" destination="4t7-qG-xy4" id="XcT-mt-Njh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjx-RA-MPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Vjl-UB-ldf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2797.5999999999999" y="837.93103448275872"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1610,7 +1672,7 @@
                     <connections>
                         <segue destination="9R2-jQ-g36" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="kdv-Cp-0ci" kind="relationship" relationship="viewControllers" id="vBr-0e-2TC"/>
+                        <segue destination="wCa-yl-bk7" kind="relationship" relationship="viewControllers" id="xXY-sT-jsK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -1654,6 +1716,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yX3-XK-idg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2172" y="4603"/>
+        </scene>
+        <!--Inventory-->
+        <scene sceneID="l8c-Mn-zBd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wCa-yl-bk7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inventory" image="folder" catalog="system" id="JJA-Gr-M4k"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nvE-NV-wmq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u6M-7N-9Eu" kind="relationship" relationship="rootViewController" id="FYb-m2-bXC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTN-Zz-s1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="837.93103448275872"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
