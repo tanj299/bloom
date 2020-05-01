@@ -10,6 +10,7 @@
 
 import Foundation
 
+// Codable: Class definition to write to a file
 class CoffeeItem: NSObject, Codable {
     var coffeeName = ""
     var dateRoasted = ""

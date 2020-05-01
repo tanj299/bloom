@@ -1569,21 +1569,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-eB-m24" userLabel="coffeeNameLabel">
-                                            <rect key="frame" x="16" y="11" width="171" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-eB-m24" userLabel="coffeeNameLabel">
+                                            <rect key="frame" x="16" y="12" width="171" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJj-uM-B69" userLabel="dateLabel">
-                                            <rect key="frame" x="188" y="11" width="171" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJj-uM-B69" userLabel="dateLabel">
+                                            <rect key="frame" x="188" y="12" width="171" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="171" id="7bU-cv-K2F"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="K7c-eB-m24" firstAttribute="leading" secondItem="3yo-uh-kUB" secondAttribute="leadingMargin" id="NHQ-qQ-6LK"/>
+                                        <constraint firstItem="tJj-uM-B69" firstAttribute="trailing" secondItem="3yo-uh-kUB" secondAttribute="trailingMargin" id="ORp-nw-DHl"/>
+                                        <constraint firstItem="tJj-uM-B69" firstAttribute="leading" secondItem="K7c-eB-m24" secondAttribute="trailing" constant="1" id="TOL-QW-0wb"/>
+                                        <constraint firstItem="K7c-eB-m24" firstAttribute="top" secondItem="3yo-uh-kUB" secondAttribute="topMargin" id="cvX-51-bGv"/>
+                                        <constraint firstItem="K7c-eB-m24" firstAttribute="leading" secondItem="3yo-uh-kUB" secondAttribute="leading" constant="16" id="gWo-Nu-DOn"/>
+                                        <constraint firstItem="tJj-uM-B69" firstAttribute="firstBaseline" secondItem="K7c-eB-m24" secondAttribute="firstBaseline" id="mzD-Fi-nzK"/>
+                                        <constraint firstItem="tJj-uM-B69" firstAttribute="baseline" secondItem="K7c-eB-m24" secondAttribute="baseline" id="sfF-31-mCx"/>
+                                        <constraint firstItem="K7c-eB-m24" firstAttribute="top" secondItem="3yo-uh-kUB" secondAttribute="top" constant="11" id="swh-mP-DEM"/>
+                                        <constraint firstItem="tJj-uM-B69" firstAttribute="leading" secondItem="K7c-eB-m24" secondAttribute="trailing" constant="1" id="tvs-vP-KTy"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -1595,7 +1607,7 @@
                     <navigationItem key="navigationItem" title="Coffee Beans" id="YcS-DP-qKX">
                         <barButtonItem key="rightBarButtonItem" title="+" id="mAY-jF-WRc">
                             <connections>
-                                <segue destination="dz9-Nv-usM" kind="presentation" id="c3Y-G9-7vJ"/>
+                                <segue destination="dz9-Nv-usM" kind="presentation" id="wFh-Gm-ppH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1647,8 +1659,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="y4v-u6-Yh4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Mr9-NF-p7c"/>
                     <connections>
                         <outlet property="CoffeeName" destination="FdN-LJ-GYb" id="eU5-7H-7ol"/>
+                        <outlet property="coffeeName" destination="FdN-LJ-GYb" id="2wU-8G-oXQ"/>
                         <outlet property="dateRoasted" destination="4t7-qG-xy4" id="XcT-mt-Njh"/>
                     </connections>
                 </viewController>
@@ -1720,6 +1734,7 @@
         <!--Inventory-->
         <scene sceneID="l8c-Mn-zBd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTN-Zz-s1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wCa-yl-bk7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Inventory" image="folder" catalog="system" id="JJA-Gr-M4k"/>
                     <toolbarItems/>
@@ -1732,7 +1747,6 @@
                         <segue destination="u6M-7N-9Eu" kind="relationship" relationship="rootViewController" id="FYb-m2-bXC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nTN-Zz-s1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="837.93103448275872"/>
         </scene>
