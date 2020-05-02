@@ -12,15 +12,15 @@ class CoffeeDetailViewController: UIViewController {
     
     var name: String = ""
     var date: String = ""
-//    var origin: String = ""
-//    var company: String = ""
+    var origin: String = ""
+    var company: String = ""
         
     // Coffee Name text field
     @IBOutlet weak var coffeeName: UITextField!
     @IBOutlet weak var dateRoasted: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-//    @IBOutlet weak var originField: UITextField!
-//    @IBOutlet weak var companyField: UITextField!
+    @IBOutlet weak var originField: UITextField!
+    @IBOutlet weak var companyField: UITextField!
     
     // Date Picker object
     @IBAction func datePickerChanged(_ sender: Any) {
@@ -37,14 +37,20 @@ class CoffeeDetailViewController: UIViewController {
         super.viewDidLoad()
         coffeeName.placeholder = "Coffee Name"
         dateRoasted.placeholder = "Date Roasted"
+        originField.placeholder = "Origin"
+        companyField.placeholder = "Company"
         
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneSegue" {
+            // Pass user input's text in the fields to InventoryVC to save in array
+            // Unwrap optional 
             name = coffeeName.text!
             date = dateRoasted.text!
+            origin = originField.text!
+            company = companyField.text!
         }
     }
     

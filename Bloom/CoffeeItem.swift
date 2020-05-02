@@ -14,4 +14,6 @@ import Foundation
 class CoffeeItem: NSObject, Codable {
     var coffeeName = ""
     var dateRoasted = ""
+    var origin = ""
+    var company = ""
 }

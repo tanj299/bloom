@@ -26,8 +26,11 @@ class InventoryViewController: UITableViewController {
         // Display it in table view
         let newBeanItem = CoffeeItem()
         let coffeeDetailVC = segue.source as! CoffeeDetailViewController
+        
         newBeanItem.coffeeName = coffeeDetailVC.name
         newBeanItem.dateRoasted = coffeeDetailVC.date
+        newBeanItem.origin = coffeeDetailVC.origin
+        newBeanItem.company = coffeeDetailVC.company
         if(newBeanItem.dateRoasted == "") {
             print("It be empty")
         }
@@ -85,9 +88,22 @@ class InventoryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedBean = coffeeInventory[indexPath.row]
         
-        // didSelectRowAt delegate will segue to full coffee details
-//        self.performSegue(withIdentifier: "coffeeDetails", sender: self)
+        print("Selected Bean: ", selectedBean.coffeeName)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let selectedRow = indexPath.row
+                let editVC = segue.destination as! EditCoffeeDetailTableViewController
+                print("Stuff got sent: ", [indexPath.row])
+            }
+            // Pass user input's text in the fields to InventoryVC to save in array
+            // Unwrap optional
+            
+        }
     }
 }
