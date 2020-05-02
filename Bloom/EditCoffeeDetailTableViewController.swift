@@ -8,26 +8,42 @@
 
 import UIKit
 
-class EditCoffeeDetailTableViewController: UITableViewController {
+protocol EditCoffeeDetailTableViewControllerDelegate: class {
+    func editCoffeeDetailViewControllerDidCancel(_ controller: EditCoffeeDetailTableViewController)
+    func editInventoryViewController(_ controller: EditCoffeeDetailTableViewController, didFinishEditing item: CoffeeItem)
+}
 
+class EditCoffeeDetailTableViewController: UITableViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var coffeeName: UITextField!
     @IBOutlet weak var dateRoasted: UITextField!
     @IBOutlet weak var origin: UITextField!
     @IBOutlet weak var company: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
+    
+    var delegate: EditCoffeeDetailTableViewControllerDelegate?
+    var coffeeItem: CoffeeItem!
     
     override func viewDidLoad() {
+        // Load the CoffeeItem() object when we pass the information from prepare(for segue) in InventoryVC
+        coffeeName.text = coffeeItem.coffeeName
+        dateRoasted.text = coffeeItem.dateRoasted
+        origin.text = coffeeItem.origin
+        company.text = coffeeItem.company
+        
+        // Placeholder names via code instead of storyboard
         coffeeName.placeholder = "Coffee Name"
         dateRoasted.placeholder = "Date Roasted"
         origin.placeholder = "Origin"
         company.placeholder = "Company"
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        coffeeName.becomeFirstResponder()
     }
     
     @IBAction func datePickerChanged(_ sender: Any) {
@@ -42,11 +58,19 @@ class EditCoffeeDetailTableViewController: UITableViewController {
 
     // MARK: - Actions
     @IBAction func cancel() {
-        navigationController?.popViewController(animated: true)
+        delegate?.editCoffeeDetailViewControllerDidCancel(self)
     }
     
     @IBAction func done() {
-        navigationController?.popViewController(animated: true)
+        print("Contents of the field: \(coffeeName.text!)" )
+        
+        // Upon pressing done, the message is editInventoryViewController(_: didFinishEditing:)
+        // Passes along the CoffeeItem with the text string from their text fields
+        coffeeItem.coffeeName = coffeeName.text!
+        coffeeItem.dateRoasted = dateRoasted.text!
+        coffeeItem.origin = origin.text!
+        coffeeItem.company = company.text!
+        delegate?.editInventoryViewController(self, didFinishEditing: coffeeItem)
     }
     
     // MARK: - Table view data source
@@ -59,7 +83,20 @@ class EditCoffeeDetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
-
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+        replacementString string: String) -> Bool {
+        let oldText = coffeeName.text!
+        let stringRange = Range(range, in: oldText)!
+        let newText = oldText.replacingCharacters(in: stringRange, with: string)
+        if newText.isEmpty {
+            doneButton.isEnabled = false
+        }
+        else {
+            doneButton.isEnabled = true
+        }
+        return true
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

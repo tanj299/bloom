@@ -108,3 +108,6 @@ Stump's AeroPress recipe
 1. Create Table View to add inventory
 2. Refer to Chapter 30 for tapable cells and array to store locations
 
+Breakpoint: expr -l objc++ -O -- [[UIWindow keyWindow] _autolayoutTrace]
+
+- Use `override func segue(prepare: for: )

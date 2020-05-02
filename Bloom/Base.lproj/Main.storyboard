@@ -1599,7 +1599,8 @@
                     <navigationItem key="navigationItem" title="Coffee Beans" id="YcS-DP-qKX">
                         <barButtonItem key="rightBarButtonItem" title="+" id="mAY-jF-WRc">
                             <connections>
-                                <segue destination="dz9-Nv-usM" kind="presentation" id="wFh-Gm-ppH"/>
+                                <action selector="addNew:" destination="u6M-7N-9Eu" id="Urk-iN-iB4"/>
+                                <segue destination="dz9-Nv-usM" kind="presentation" identifier="addNew" id="rji-Is-mgg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1611,7 +1612,6 @@
         <!--Edit Coffee Details-->
         <scene sceneID="f3a-p3-7ZP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AsL-sN-zCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="4Ho-um-Nqb" customClass="EditCoffeeDetailTableViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="cyj-ov-xI8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1637,7 +1637,11 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qkn-aW-f7r">
                                                     <rect key="frame" x="16" y="5" width="343" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="4Ho-um-Nqb" eventType="editingDidEndOnExit" id="AVl-xY-1e9"/>
+                                                        <outlet property="delegate" destination="4Ho-um-Nqb" id="WRK-IO-Jap"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1658,7 +1662,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-CD-W4i">
                                                     <rect key="frame" x="16" y="5" width="343" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1679,7 +1683,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTR-T7-UgR">
                                                     <rect key="frame" x="16" y="5" width="343" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1700,7 +1704,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcx-Fu-bMx">
                                                     <rect key="frame" x="16" y="5" width="343" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1736,16 +1740,18 @@
                         <outlet property="company" destination="zcx-Fu-bMx" id="OIZ-0b-xeg"/>
                         <outlet property="datePicker" destination="6gm-Kt-pXO" id="TgR-37-9po"/>
                         <outlet property="dateRoasted" destination="TfI-CD-W4i" id="sDN-02-akA"/>
+                        <outlet property="doneButton" destination="WAN-H0-F6k" id="fLj-dW-Ktx"/>
                         <outlet property="origin" destination="pTR-T7-UgR" id="CR0-e4-aGZ"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AsL-sN-zCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="1312.8935532233884"/>
+            <point key="canvasLocation" x="2804" y="1169"/>
         </scene>
         <!--Coffee Detail View Controller-->
         <scene sceneID="ppN-tI-1De">
             <objects>
-                <viewController id="dz9-Nv-usM" customClass="CoffeeDetailViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dz9-Nv-usM" customClass="CoffeeDetailViewController" customModule="Bloom" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kxa-tD-IuA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1758,13 +1764,13 @@
                                     <navigationItem title="Add Coffee Beans" id="ruP-sH-dVU">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hcQ-8H-KME">
                                             <connections>
-                                                <segue destination="Vjl-UB-ldf" kind="unwind" identifier="cancelSegue" unwindAction="cancelWithSegue:" id="CVy-kO-Lwk"/>
+                                                <segue destination="Vjl-UB-ldf" kind="unwind" identifier="cancel" unwindAction="cancelWithSegue:" id="yrA-4X-owT"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="YWH-Pb-TPB">
                                             <connections>
                                                 <action selector="done:" destination="Vjl-UB-ldf" id="I6M-KE-Qwy"/>
-                                                <segue destination="Vjl-UB-ldf" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="LTE-T3-Rh0"/>
+                                                <segue destination="Vjl-UB-ldf" kind="unwind" identifier="doneSegue" unwindAction="doneWithSegue:" id="gQX-nR-qWo"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1792,7 +1798,7 @@
                                 <rect key="frame" x="0.0" y="280" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="datePickerChanged:" destination="dz9-Nv-usM" eventType="valueChanged" id="mlz-O8-zMw"/>
+                                    <action selector="datePickerAddChanged:" destination="dz9-Nv-usM" eventType="valueChanged" id="G9P-Gi-MBC"/>
                                 </connections>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SBz-e0-2pC">
@@ -1807,18 +1813,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mr9-NF-p7c"/>
                     <connections>
-                        <outlet property="CoffeeName" destination="FdN-LJ-GYb" id="eU5-7H-7ol"/>
-                        <outlet property="coffeeName" destination="FdN-LJ-GYb" id="2wU-8G-oXQ"/>
-                        <outlet property="companyField" destination="SBz-e0-2pC" id="ZLV-c7-d03"/>
-                        <outlet property="datePicker" destination="Mp0-Y0-Fgu" id="zPq-FY-QpP"/>
-                        <outlet property="dateRoasted" destination="4t7-qG-xy4" id="XcT-mt-Njh"/>
-                        <outlet property="originField" destination="vpJ-jN-18Y" id="kLX-hg-wuM"/>
+                        <outlet property="coffeeNameAdd" destination="FdN-LJ-GYb" id="4ai-n6-Qb4"/>
+                        <outlet property="companyAdd" destination="SBz-e0-2pC" id="a03-Xh-mYn"/>
+                        <outlet property="datePickerAdd" destination="Mp0-Y0-Fgu" id="ov4-PS-i1k"/>
+                        <outlet property="dateRoastedAdd" destination="4t7-qG-xy4" id="a8s-0v-xra"/>
+                        <outlet property="originAdd" destination="vpJ-jN-18Y" id="kYT-fA-org"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjx-RA-MPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Vjl-UB-ldf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="597"/>
+            <point key="canvasLocation" x="2804" y="495"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

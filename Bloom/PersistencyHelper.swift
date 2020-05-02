@@ -19,6 +19,7 @@ class PersistencyHelper {
         }
         catch {
             print("Error encoding item array: \(error.localizedDescription)")
+            debugPrint(error)
         }
     }
     
@@ -32,6 +33,7 @@ class PersistencyHelper {
             }
             catch {
                 print("Error decoding item array: \(error.localizedDescription)")
+                debugPrint(error)
             }
         }
         return inventory
