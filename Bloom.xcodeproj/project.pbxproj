@@ -24,6 +24,7 @@
 		64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1C593244B98600045F861 /* AeroPressViewController.swift */; };
 		64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F54824476B3700CC079A /* InventoryViewController.swift */; };
 		64E253392458E8500062F5DD /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E253382458E8500062F5DD /* Key.swift */; };
+		64EF2B66245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF2B65245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift */; };
 		64FAD0F6245121A000DA02A4 /* StirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAD0F5245121A000DA02A4 /* StirViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		64C1F54824476B3700CC079A /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		64C1F54C2447D26300CC079A /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
 		64E253382458E8500062F5DD /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		64EF2B65245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeCellTableViewCell.swift; sourceTree = "<group>"; };
 		64FAD0F5245121A000DA02A4 /* StirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StirViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				64C1F54824476B3700CC079A /* InventoryViewController.swift */,
 				64AA6303245CB162009B3CAB /* CoffeeItem.swift */,
 				64AA6301245CA69B009B3CAB /* CoffeeDetailViewController.swift */,
+				64EF2B65245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift */,
 				64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */,
 				64E253382458E8500062F5DD /* Key.swift */,
 				643AA8AB2452424600B2FB66 /* URLSession.swift */,
@@ -189,6 +192,7 @@
 				649565EF245208ED007C49C8 /* PlacePlungerViewController.swift in Sources */,
 				64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */,
 				643AA8AC2452424600B2FB66 /* URLSession.swift in Sources */,
+				64EF2B66245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift in Sources */,
 				640132E1243FA1C100D2479B /* BrewViewController.swift in Sources */,
 				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
 				64E253392458E8500062F5DD /* Key.swift in Sources */,
@@ -345,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4F4VLPB9D;
 				INFOPLIST_FILE = Bloom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4F4VLPB9D;
 				INFOPLIST_FILE = Bloom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

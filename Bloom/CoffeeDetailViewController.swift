@@ -12,12 +12,17 @@ class CoffeeDetailViewController: UIViewController {
     
     var name: String = ""
     var date: String = ""
+//    var origin: String = ""
+//    var company: String = ""
         
     // Coffee Name text field
     @IBOutlet weak var coffeeName: UITextField!
     @IBOutlet weak var dateRoasted: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
+//    @IBOutlet weak var originField: UITextField!
+//    @IBOutlet weak var companyField: UITextField!
     
+    // Date Picker object
     @IBAction func datePickerChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
         
@@ -32,6 +37,7 @@ class CoffeeDetailViewController: UIViewController {
         super.viewDidLoad()
         coffeeName.placeholder = "Coffee Name"
         dateRoasted.placeholder = "Date Roasted"
+        
         // Do any additional setup after loading the view.
     }
     
@@ -42,9 +48,9 @@ class CoffeeDetailViewController: UIViewController {
         }
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return true
-    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) -> Bool {
+//        self.view.endEditing(true)
+//        return true
+//    }
 
 }

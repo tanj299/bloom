@@ -28,6 +28,9 @@ class InventoryViewController: UITableViewController {
         let coffeeDetailVC = segue.source as! CoffeeDetailViewController
         newBeanItem.coffeeName = coffeeDetailVC.name
         newBeanItem.dateRoasted = coffeeDetailVC.date
+        if(newBeanItem.dateRoasted == "") {
+            print("It be empty")
+        }
         
         // Add new item to array and reload the data
         // Persist data in Inventory.plist, do NOT create a new inventory
@@ -35,7 +38,7 @@ class InventoryViewController: UITableViewController {
         coffeeInventory = PersistencyHelper.loadInventory()
         coffeeInventory.append(newBeanItem)
         PersistencyHelper.saveBeanInventory(coffeeInventory)
-        self.tableView.reloadData()
+        tableView.reloadData()
 
         print("current inventory: ", coffeeInventory)
 //        tableView.reloadData()
@@ -82,7 +85,9 @@ class InventoryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "coffeeDetails", sender: self)
+        
+        // didSelectRowAt delegate will segue to full coffee details
+//        self.performSegue(withIdentifier: "coffeeDetails", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

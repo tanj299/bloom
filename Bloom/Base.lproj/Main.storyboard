@@ -1556,11 +1556,13 @@
         <!--Coffee Beans-->
         <scene sceneID="8AW-eN-lP6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2lO-9J-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="u6M-7N-9Eu" customClass="InventoryViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Iy-4i-H0u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeItem" id="YXf-We-n6c">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
@@ -1569,33 +1571,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-eB-m24" userLabel="coffeeNameLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-eB-m24" userLabel="coffeeNameLabel">
                                             <rect key="frame" x="16" y="12" width="171" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJj-uM-B69" userLabel="dateLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJj-uM-B69" userLabel="dateLabel">
                                             <rect key="frame" x="188" y="12" width="171" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="171" id="7bU-cv-K2F"/>
-                                            </constraints>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="K7c-eB-m24" firstAttribute="leading" secondItem="3yo-uh-kUB" secondAttribute="leadingMargin" id="NHQ-qQ-6LK"/>
-                                        <constraint firstItem="tJj-uM-B69" firstAttribute="trailing" secondItem="3yo-uh-kUB" secondAttribute="trailingMargin" id="ORp-nw-DHl"/>
-                                        <constraint firstItem="tJj-uM-B69" firstAttribute="leading" secondItem="K7c-eB-m24" secondAttribute="trailing" constant="1" id="TOL-QW-0wb"/>
-                                        <constraint firstItem="K7c-eB-m24" firstAttribute="top" secondItem="3yo-uh-kUB" secondAttribute="topMargin" id="cvX-51-bGv"/>
-                                        <constraint firstItem="K7c-eB-m24" firstAttribute="leading" secondItem="3yo-uh-kUB" secondAttribute="leading" constant="16" id="gWo-Nu-DOn"/>
-                                        <constraint firstItem="tJj-uM-B69" firstAttribute="firstBaseline" secondItem="K7c-eB-m24" secondAttribute="firstBaseline" id="mzD-Fi-nzK"/>
-                                        <constraint firstItem="tJj-uM-B69" firstAttribute="baseline" secondItem="K7c-eB-m24" secondAttribute="baseline" id="sfF-31-mCx"/>
-                                        <constraint firstItem="K7c-eB-m24" firstAttribute="top" secondItem="3yo-uh-kUB" secondAttribute="top" constant="11" id="swh-mP-DEM"/>
-                                        <constraint firstItem="tJj-uM-B69" firstAttribute="leading" secondItem="K7c-eB-m24" secondAttribute="trailing" constant="1" id="tvs-vP-KTy"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -1612,7 +1602,6 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2lO-9J-wdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1888.8" y="837.93103448275872"/>
         </scene>
