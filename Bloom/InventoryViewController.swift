@@ -53,6 +53,8 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
         coffeeInventory = PersistencyHelper.loadInventory()
 
         // Do any additional setup after loading the view.
@@ -61,10 +63,14 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
     // MARK: - Table View Data Source
     // Table View data source for coffee inventory, including delegates
     
+    // Delegate responsible to show number of rows
+    // @return: number of rows visible in table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coffeeInventory.count
     }
     
+    // Delegate responsible for the cell information
+    // @return: cell information to be displayed
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoffeeItem", for: indexPath)
         
@@ -88,6 +94,8 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
         PersistencyHelper.saveBeanInventory(coffeeInventory)
     }
     
+    // Delegate responsible for selection of row and what happens
+    // Currently, only thing it does is to deselect row with an animation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedBean = coffeeInventory[indexPath.row]
         

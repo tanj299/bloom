@@ -110,4 +110,9 @@ Stump's AeroPress recipe
 
 Breakpoint: expr -l objc++ -O -- [[UIWindow keyWindow] _autolayoutTrace]
 
-- Use `override func segue(prepare: for: )
+- Use `override func segue(prepare: for: )` to pass data around
+
+**Discover View**
+- Use extension for the SearchBar (page 1037, chapter 37)
+    - SearchBar must be connected to the `delegate`. Drag the search bar to the top of the controller and connect it
+- Covers storing the objects in an array 

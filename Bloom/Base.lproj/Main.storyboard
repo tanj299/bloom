@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Brew View Controller-->
+        <!--Brew-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="BrewViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
@@ -582,7 +582,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fZZ-f8-sfX"/>
+                    <navigationItem key="navigationItem" title="Brew" id="fZZ-f8-sfX"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -1553,38 +1553,54 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="837.93103448275872"/>
         </scene>
-        <!--Coffee Beans-->
+        <!--Inventory-->
         <scene sceneID="8AW-eN-lP6">
             <objects>
                 <tableViewController id="u6M-7N-9Eu" customClass="InventoryViewController" customModule="Bloom" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Iy-4i-H0u">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Iy-4i-H0u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.97647058819999999" green="0.91372549020000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeItem" id="YXf-We-n6c">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeItem" rowHeight="64" id="YXf-We-n6c">
+                                <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YXf-We-n6c" id="3yo-uh-kUB" customClass="CoffeeCellTableViewCell" customModule="Bloom" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YXf-We-n6c" id="3yo-uh-kUB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-eB-m24" userLabel="coffeeNameLabel">
-                                            <rect key="frame" x="16" y="12" width="171" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-eB-m24" userLabel="coffeeNameLabel">
+                                            <rect key="frame" x="102" y="6" width="139" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJj-uM-B69" userLabel="dateLabel">
-                                            <rect key="frame" x="188" y="12" width="171" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJj-uM-B69" userLabel="dateLabel">
+                                            <rect key="frame" x="102" y="33" width="171" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brew_beans" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-98-EWV">
+                                            <rect key="frame" x="20" y="5" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="DsO-Vd-xKn"/>
+                                                <constraint firstAttribute="width" constant="50" id="xIH-e6-a5J"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="tJj-uM-B69" secondAttribute="bottom" constant="10" id="00T-dW-gcB"/>
+                                        <constraint firstItem="tJj-uM-B69" firstAttribute="top" secondItem="K7c-eB-m24" secondAttribute="bottom" constant="6" id="4ni-We-OpO"/>
+                                        <constraint firstItem="dSt-98-EWV" firstAttribute="top" secondItem="3yo-uh-kUB" secondAttribute="top" constant="5" id="AQr-b8-qeA"/>
+                                        <constraint firstAttribute="trailing" secondItem="K7c-eB-m24" secondAttribute="trailing" constant="134" id="BWv-oY-2cD"/>
+                                        <constraint firstAttribute="trailing" secondItem="tJj-uM-B69" secondAttribute="trailing" constant="102" id="T5a-8r-8co"/>
+                                        <constraint firstItem="tJj-uM-B69" firstAttribute="leading" secondItem="dSt-98-EWV" secondAttribute="trailing" constant="32" id="WYv-y9-hMc"/>
+                                        <constraint firstItem="dSt-98-EWV" firstAttribute="leading" secondItem="3yo-uh-kUB" secondAttribute="leading" constant="20" id="cCi-Hp-iwO"/>
+                                        <constraint firstItem="K7c-eB-m24" firstAttribute="top" secondItem="3yo-uh-kUB" secondAttribute="top" constant="6" id="dm3-58-bjo"/>
+                                        <constraint firstItem="K7c-eB-m24" firstAttribute="leading" secondItem="dSt-98-EWV" secondAttribute="trailing" constant="32" id="wlR-hY-dko"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="4Ho-um-Nqb" kind="show" identifier="editSegue" id="ZEo-Od-JJC"/>
@@ -1596,7 +1612,7 @@
                             <outlet property="delegate" destination="u6M-7N-9Eu" id="af5-mi-nNL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Coffee Beans" id="YcS-DP-qKX">
+                    <navigationItem key="navigationItem" title="Inventory" id="YcS-DP-qKX">
                         <barButtonItem key="rightBarButtonItem" title="+" id="mAY-jF-WRc">
                             <connections>
                                 <action selector="addNew:" destination="u6M-7N-9Eu" id="Urk-iN-iB4"/>
@@ -1850,7 +1866,7 @@
         <!--Brew-->
         <scene sceneID="bDz-ae-9Xq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9R2-jQ-g36" sceneMemberID="viewController">
+                <navigationController title="Brew" automaticallyAdjustsScrollViewInsets="NO" id="9R2-jQ-g36" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Brew" image="brew_tab_1x" id="acW-dT-cKf">
                         <color key="badgeColor" red="0.85882352939999995" green="0.75686274509999996" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -1914,6 +1930,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="aeropress" width="50" height="50"/>
+        <image name="brew_beans" width="16.666666030883789" height="16.666666030883789"/>
         <image name="brew_tab_1x" width="35" height="35"/>
         <image name="cold_brew" width="50" height="50"/>
         <image name="folder" catalog="system" width="128" height="95"/>
