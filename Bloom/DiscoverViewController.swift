@@ -27,6 +27,10 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     var updatingLocation = false
     var lastLocationError: Error?
     
+    // annotations are pins in MapKit
+    // Sample annotation - Blue Bottle in Park Slope
+    let blueBottleAnnotation = MKPointAnnotation()
+    
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
@@ -107,6 +111,7 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     }
     
     @IBAction func cafe() {
+        
         return
     }
     
@@ -231,6 +236,12 @@ class DiscoverViewController: UIViewController, MKMapViewDelegate, CLLocationMan
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Load annotation - Blue Bottle in Park Slope
+        blueBottleAnnotation.coordinate = CLLocationCoordinate2D(latitude: 40.674576, longitude: 73.977945)
+        blueBottleAnnotation.title = "Blue Bottle Park Slope"
+        mapView.addAnnotation(blueBottleAnnotation)
+        
 //        centerOnLocation()
         // Do any additional setup after loading the view.
     }

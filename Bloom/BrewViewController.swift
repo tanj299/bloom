@@ -33,10 +33,7 @@ class BrewViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
     }
-    
-    @IBAction func brewTest() {
-        print("You are in Brew Controller")
-    }
+
     
 // MARK: - Immersion
     

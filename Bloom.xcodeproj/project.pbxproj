@@ -23,8 +23,10 @@
 		64AA6304245CB162009B3CAB /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6303245CB162009B3CAB /* CoffeeItem.swift */; };
 		64AA6306245CC09B009B3CAB /* PersistencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */; };
 		64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1C593244B98600045F861 /* AeroPressViewController.swift */; };
+		64B25CC92464FC0C00F3BBB1 /* CafeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B25CC82464FC0C00F3BBB1 /* CafeDetailViewController.swift */; };
 		64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F54824476B3700CC079A /* InventoryViewController.swift */; };
 		64E253392458E8500062F5DD /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E253382458E8500062F5DD /* Key.swift */; };
+		64E71A2D24648E5000DE8EDA /* DiscoverNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E71A2C24648E5000DE8EDA /* DiscoverNewViewController.swift */; };
 		64EF2B66245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EF2B65245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift */; };
 		64FAD0F6245121A000DA02A4 /* StirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAD0F5245121A000DA02A4 /* StirViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,9 +51,11 @@
 		64AA6303245CB162009B3CAB /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyHelper.swift; sourceTree = "<group>"; };
 		64B1C593244B98600045F861 /* AeroPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroPressViewController.swift; sourceTree = "<group>"; };
+		64B25CC82464FC0C00F3BBB1 /* CafeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailViewController.swift; sourceTree = "<group>"; };
 		64C1F54824476B3700CC079A /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		64C1F54C2447D26300CC079A /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
 		64E253382458E8500062F5DD /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		64E71A2C24648E5000DE8EDA /* DiscoverNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverNewViewController.swift; sourceTree = "<group>"; };
 		64EF2B65245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeCellTableViewCell.swift; sourceTree = "<group>"; };
 		64FAD0F5245121A000DA02A4 /* StirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StirViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,9 +98,11 @@
 				640132DE243FA1C100D2479B /* SceneDelegate.swift */,
 				640132E0243FA1C100D2479B /* BrewViewController.swift */,
 				64133C0D243FB6660037231F /* DiscoverViewController.swift */,
+				64E71A2C24648E5000DE8EDA /* DiscoverNewViewController.swift */,
+				64B25CC82464FC0C00F3BBB1 /* CafeDetailViewController.swift */,
+				64AA6301245CA69B009B3CAB /* CoffeeDetailViewController.swift */,
 				64C1F54824476B3700CC079A /* InventoryViewController.swift */,
 				64AA6303245CB162009B3CAB /* CoffeeItem.swift */,
-				64AA6301245CA69B009B3CAB /* CoffeeDetailViewController.swift */,
 				64EF2B65245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift */,
 				6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */,
 				64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */,
@@ -199,9 +205,11 @@
 				640132E1243FA1C100D2479B /* BrewViewController.swift in Sources */,
 				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
 				64E253392458E8500062F5DD /* Key.swift in Sources */,
+				64B25CC92464FC0C00F3BBB1 /* CafeDetailViewController.swift in Sources */,
 				64FAD0F6245121A000DA02A4 /* StirViewController.swift in Sources */,
 				649565F1245209E5007C49C8 /* WaitViewController.swift in Sources */,
 				640132DD243FA1C100D2479B /* AppDelegate.swift in Sources */,
+				64E71A2D24648E5000DE8EDA /* DiscoverNewViewController.swift in Sources */,
 				64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */,
 				64AA6306245CC09B009B3CAB /* PersistencyHelper.swift in Sources */,
 				649565F3245209F2007C49C8 /* PressViewController.swift in Sources */,

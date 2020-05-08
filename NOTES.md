@@ -112,7 +112,19 @@ Breakpoint: expr -l objc++ -O -- [[UIWindow keyWindow] _autolayoutTrace]
 
 - Use `override func segue(prepare: for: )` to pass data around
 
-**Discover View**
+- **Discover View**
 - Use extension for the SearchBar (page 1037, chapter 37)
     - SearchBar must be connected to the `delegate`. Drag the search bar to the top of the controller and connect it
 - Covers storing the objects in an array 
+- To parse JSON data, we have to 
+    1. Set up a class to contain the appropriate data (see: SearchResult.swift)
+    2. Retrieve JSON object via URLSession
+    
+- Steps for `Discover`
+    1. Get current location with the Location portion in textbook
+    2. Save longitude and latitude
+    3. Make an API request with Google Places API with current location
+        - Configure the URL such that the places API will query with current location's coordinates, radius, and type of places is `cafe`
+    4. I can achieve either the following:
+        - Display the results in table view OR
+        - Output the closest cafe result as an address with reverse Geocoding (765)
