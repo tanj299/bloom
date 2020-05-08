@@ -20,8 +20,7 @@ class URLSessionTestViewController: UIViewController  {
     var searchResults = [SearchResult]()
     
     @IBAction func callAPI() {
-        let call = apiCall(searchText: "Museum of Contemporary Art Australia")
-        print("API Call Results: \(call)")
+        asyncCall()
     }
     
     // Can call API
@@ -45,10 +44,10 @@ class URLSessionTestViewController: UIViewController  {
 
 extension URLSessionTestViewController {
     
-    func apiCall(searchText: String) -> URL {
+    func asyncCall() {
         let session = URLSession.shared
-        let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format:"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(hunterLatitude),\(hunterLongitude)&radius=200&type=cafe&key=\(key)", encodedText)
+//        let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let urlString = String(format:"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(hunterLatitude),\(hunterLongitude)&radius=200&type=cafe&key=\(key)")
         let url = URL(string: urlString)
         let task = session.dataTask(with: url!, completionHandler: {
             data, response, error in
@@ -61,6 +60,11 @@ extension URLSessionTestViewController {
                     self.searchResults = self.parse(data: data)
 //                    self.searchResults.sort(by: <)
                     print("Search Results: \(self.searchResults)")
+                    
+                    // Get Coordinates in loop
+                    for results in self.searchResults {
+                        print("Coordinates: \(results.geometry.location.lat), \(results.geometry.location.lng)")
+                    }
                     DispatchQueue.main.async {
 //                        self.isLoading = false
 //                        self.tableView.reloadData()
@@ -78,7 +82,7 @@ extension URLSessionTestViewController {
             }
         })
         task.resume()
-        return url!
+//        return url!
     }
     
     // For use with `googlePlacesCall`
