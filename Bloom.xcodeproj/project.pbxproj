@@ -13,6 +13,7 @@
 		640132E6243FA1C100D2479B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640132E4243FA1C100D2479B /* Main.storyboard */; };
 		640132E8243FA1C400D2479B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640132E7243FA1C400D2479B /* Assets.xcassets */; };
 		640132EB243FA1C400D2479B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640132E9243FA1C400D2479B /* LaunchScreen.storyboard */; };
+		640A22BB2465218500648428 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640A22BA2465218500648428 /* SearchResult.swift */; };
 		64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64133C0D243FB6660037231F /* DiscoverViewController.swift */; };
 		6420E043245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */; };
 		643AA8AC2452424600B2FB66 /* URLSessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643AA8AB2452424600B2FB66 /* URLSessionTest.swift */; };
@@ -22,6 +23,7 @@
 		64AA6302245CA69B009B3CAB /* CoffeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6301245CA69B009B3CAB /* CoffeeDetailViewController.swift */; };
 		64AA6304245CB162009B3CAB /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6303245CB162009B3CAB /* CoffeeItem.swift */; };
 		64AA6306245CC09B009B3CAB /* PersistencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */; };
+		64ADDEE7246602390085E2F5 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADDEE6246602390085E2F5 /* TimerManager.swift */; };
 		64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1C593244B98600045F861 /* AeroPressViewController.swift */; };
 		64B25CC92464FC0C00F3BBB1 /* CafeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B25CC82464FC0C00F3BBB1 /* CafeDetailViewController.swift */; };
 		64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F54824476B3700CC079A /* InventoryViewController.swift */; };
@@ -41,6 +43,7 @@
 		640132EA243FA1C400D2479B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		640132EC243FA1C400D2479B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		640A22BA2465218500648428 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCoffeeDetailTableViewController.swift; sourceTree = "<group>"; };
 		643AA8AB2452424600B2FB66 /* URLSessionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTest.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		64AA6301245CA69B009B3CAB /* CoffeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailViewController.swift; sourceTree = "<group>"; };
 		64AA6303245CB162009B3CAB /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyHelper.swift; sourceTree = "<group>"; };
+		64ADDEE6246602390085E2F5 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		64B1C593244B98600045F861 /* AeroPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroPressViewController.swift; sourceTree = "<group>"; };
 		64B25CC82464FC0C00F3BBB1 /* CafeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailViewController.swift; sourceTree = "<group>"; };
 		64C1F54824476B3700CC079A /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */,
 				64E253382458E8500062F5DD /* Key.swift */,
 				643AA8AB2452424600B2FB66 /* URLSessionTest.swift */,
+				640A22BA2465218500648428 /* SearchResult.swift */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
 				640132EC243FA1C400D2479B /* Info.plist */,
@@ -118,6 +123,7 @@
 		649565F624520A4D007C49C8 /* AeroPress */ = {
 			isa = PBXGroup;
 			children = (
+				64ADDEE6246602390085E2F5 /* TimerManager.swift */,
 				64B1C593244B98600045F861 /* AeroPressViewController.swift */,
 				64FAD0F5245121A000DA02A4 /* StirViewController.swift */,
 				649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */,
@@ -206,9 +212,11 @@
 				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
 				64E253392458E8500062F5DD /* Key.swift in Sources */,
 				64B25CC92464FC0C00F3BBB1 /* CafeDetailViewController.swift in Sources */,
+				640A22BB2465218500648428 /* SearchResult.swift in Sources */,
 				64FAD0F6245121A000DA02A4 /* StirViewController.swift in Sources */,
 				649565F1245209E5007C49C8 /* WaitViewController.swift in Sources */,
 				640132DD243FA1C100D2479B /* AppDelegate.swift in Sources */,
+				64ADDEE7246602390085E2F5 /* TimerManager.swift in Sources */,
 				64E71A2D24648E5000DE8EDA /* DiscoverNewViewController.swift in Sources */,
 				64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */,
 				64AA6306245CC09B009B3CAB /* PersistencyHelper.swift in Sources */,

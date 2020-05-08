@@ -14,7 +14,9 @@ import CoreLocation
 // If there is no annotation(the blue dot that indicates your location), simulate location
 // Hunter College Coordinates: 40.767962, -73.964207
 // Sample Query for `cafe` near Hunter College: Radius: 200m, Type: cafe
-// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.767954,-73.964572&radius=200&type=cafe&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.767962,-73.964572&radius=200&type=cafe&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
+// Sample Query for 'Museum of Contemporary Art Australia'
+// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
 
 class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
 
