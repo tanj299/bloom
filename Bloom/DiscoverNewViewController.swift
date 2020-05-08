@@ -9,7 +9,12 @@
 import UIKit
 import CoreLocation
 
+// NOTE: Location spoofing has been moved to `Features` in update
+// To spoof location, go to Simulator -> Features -> Location -> Apple (or whatever)
+// If there is no annotation(the blue dot that indicates your location), simulate location
 // Hunter College Coordinates: 40.767962, -73.964207
+// Sample Query for `cafe` near Hunter College: Radius: 200m, Type: cafe
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.767954,-73.964572&radius=200&type=cafe&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
 
 class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -21,6 +26,13 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
+    
+    @IBOutlet weak var gLatitudeLabel: UILabel!
+    @IBOutlet weak var gLongitudeLabel: UILabel!
+    @IBAction func gGetLocation() {
+        
+    }
+    
     
     // CLLocation object that gives GPS coordinates
     // However, it doens't give location right away - use startUpdatingLocation()

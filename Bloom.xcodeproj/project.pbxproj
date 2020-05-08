@@ -15,7 +15,7 @@
 		640132EB243FA1C400D2479B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640132E9243FA1C400D2479B /* LaunchScreen.storyboard */; };
 		64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64133C0D243FB6660037231F /* DiscoverViewController.swift */; };
 		6420E043245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */; };
-		643AA8AC2452424600B2FB66 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643AA8AB2452424600B2FB66 /* URLSession.swift */; };
+		643AA8AC2452424600B2FB66 /* URLSessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643AA8AB2452424600B2FB66 /* URLSessionTest.swift */; };
 		649565EF245208ED007C49C8 /* PlacePlungerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */; };
 		649565F1245209E5007C49C8 /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649565F0245209E5007C49C8 /* WaitViewController.swift */; };
 		649565F3245209F2007C49C8 /* PressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649565F2245209F2007C49C8 /* PressViewController.swift */; };
@@ -43,7 +43,7 @@
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCoffeeDetailTableViewController.swift; sourceTree = "<group>"; };
-		643AA8AB2452424600B2FB66 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		643AA8AB2452424600B2FB66 /* URLSessionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTest.swift; sourceTree = "<group>"; };
 		649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePlungerViewController.swift; sourceTree = "<group>"; };
 		649565F0245209E5007C49C8 /* WaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
 		649565F2245209F2007C49C8 /* PressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */,
 				64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */,
 				64E253382458E8500062F5DD /* Key.swift */,
-				643AA8AB2452424600B2FB66 /* URLSession.swift */,
+				643AA8AB2452424600B2FB66 /* URLSessionTest.swift */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
 				640132EC243FA1C400D2479B /* Info.plist */,
@@ -200,7 +200,7 @@
 			files = (
 				649565EF245208ED007C49C8 /* PlacePlungerViewController.swift in Sources */,
 				64B1C594244B98600045F861 /* AeroPressViewController.swift in Sources */,
-				643AA8AC2452424600B2FB66 /* URLSession.swift in Sources */,
+				643AA8AC2452424600B2FB66 /* URLSessionTest.swift in Sources */,
 				64EF2B66245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift in Sources */,
 				640132E1243FA1C100D2479B /* BrewViewController.swift in Sources */,
 				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
