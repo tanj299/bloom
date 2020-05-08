@@ -365,8 +365,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
-// MARK: - Views
-    
+// MARK: - Views    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
@@ -382,4 +381,14 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
         updateLabels()
     }
     
+// MARK: - Navigation
+    
+    // Prepare for segue - pass information to `CafeDetailViewController`
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CafeLocation" {
+            let controller = segue.destination as! CafeDetailViewController
+            controller.coordinate = location!.coordinate
+            controller.placemark = placemark
+        }
+    }
 }
