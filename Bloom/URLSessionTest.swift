@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// https://stackoverflow.com/questions/33304340/how-to-find-out-distance-between-coordinates
+
 // Sample Query for 'Museum of Contemporary Art Australia'
 // https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
 

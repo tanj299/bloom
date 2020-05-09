@@ -584,6 +584,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Brew" id="fZZ-f8-sfX"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="aeroPressLabel" destination="sAg-1L-2U6" id="ooc-GR-dUh"/>
+                        <outlet property="bodumLabel" destination="7YE-0X-qIZ" id="cWg-vh-4ix"/>
+                        <outlet property="bodumSantosLabel" destination="RZd-ZK-zjE" id="LyK-lc-Gg2"/>
+                        <outlet property="chemexLabel" destination="zzD-7c-HUl" id="95m-5V-kss"/>
+                        <outlet property="coldBrewLabel" destination="tSe-ZC-er1" id="n53-LZ-Km3"/>
+                        <outlet property="espressoLabel" destination="zMp-1S-WMJ" id="IDj-Ig-ilv"/>
+                        <outlet property="frenchPressLabel" destination="kai-mw-AZL" id="RsC-Uc-Qvi"/>
+                        <outlet property="harioTechnicaLabel" destination="K1h-KA-4y6" id="IEj-Bp-TAH"/>
+                        <outlet property="hariov60Label" destination="dWJ-g7-A2g" id="ian-hV-1Ig"/>
+                        <outlet property="kalitaWaveLabel" destination="4mE-gG-T13" id="hT7-Vy-jji"/>
+                        <outlet property="manualPourOverLabel" destination="uQv-i7-fgN" id="lLm-Pb-JeJ"/>
+                        <outlet property="mokaPotLabel" destination="FRg-nW-X0O" id="OmZ-Rb-2Nn"/>
+                        <outlet property="phinLabel" destination="w2v-d4-hKF" id="Xdx-ss-pbk"/>
+                        <outlet property="yamaGlassLabel" destination="43A-Uo-VFf" id="tVW-uQ-Q42"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

@@ -244,7 +244,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             else {
                 addressLabel.text = "No Address Found"
             }
-                        
+            
             // Assign current latitude and longitude to query later
             latitude = location.coordinate.latitude
             longitude = location.coordinate.longitude

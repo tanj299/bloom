@@ -14,9 +14,40 @@
 import UIKit
 
 class BrewViewController: UIViewController {
-
+//MARK: - Outlet
+    @IBOutlet weak var aeroPressLabel: UILabel!
+    @IBOutlet weak var frenchPressLabel: UILabel!
+    @IBOutlet weak var coldBrewLabel: UILabel!
+    @IBOutlet weak var hariov60Label: UILabel!
+    @IBOutlet weak var kalitaWaveLabel: UILabel!
+    @IBOutlet weak var chemexLabel: UILabel!
+    @IBOutlet weak var bodumLabel: UILabel!
+    @IBOutlet weak var manualPourOverLabel: UILabel!
+    @IBOutlet weak var harioTechnicaLabel: UILabel!
+    @IBOutlet weak var yamaGlassLabel: UILabel!
+    @IBOutlet weak var bodumSantosLabel: UILabel!
+    @IBOutlet weak var espressoLabel: UILabel!
+    @IBOutlet weak var mokaPotLabel: UILabel!
+    @IBOutlet weak var phinLabel: UILabel!
+    
+// MARK: - Views
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Fade out all labels
+        self.aeroPressLabel.fadeOut()
+        self.frenchPressLabel.fadeOut()
+        self.coldBrewLabel.fadeOut()
+        self.hariov60Label.fadeOut()
+        self.kalitaWaveLabel.fadeOut()
+        self.chemexLabel.fadeOut()
+        self.bodumLabel.fadeOut()
+        self.manualPourOverLabel.fadeOut()
+        self.harioTechnicaLabel.fadeOut()
+        self.yamaGlassLabel.fadeOut()
+        self.bodumSantosLabel.fadeOut()
+        self.espressoLabel.fadeOut()
+        self.mokaPotLabel.fadeOut()
+        self.phinLabel.fadeOut()
         // Do any additional setup after loading the view.
     }
     
