@@ -42,9 +42,9 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
         // Add new item to array and reload the data
         // Persist data in Inventory.plist, do NOT create a new inventory
         // Use reference of coffeeInventory to persist data
-        coffeeInventory = PersistencyHelper.loadInventory()
+        coffeeInventory = PersistencyHelper.beanShared.loadInventory()
         coffeeInventory.append(newBeanItem)
-        PersistencyHelper.saveBeanInventory(coffeeInventory)
+        PersistencyHelper.beanShared.saveBeanInventory(coffeeInventory)
         tableView.reloadData()
 
         print("current inventory: ", coffeeInventory)
@@ -55,7 +55,7 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
         super.viewDidLoad()
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
-        coffeeInventory = PersistencyHelper.loadInventory()
+        coffeeInventory = PersistencyHelper.beanShared.loadInventory()
 
         // Do any additional setup after loading the view.
     }
@@ -91,7 +91,7 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .fade)
         
-        PersistencyHelper.saveBeanInventory(coffeeInventory)
+        PersistencyHelper.beanShared.saveBeanInventory(coffeeInventory)
     }
     
     // Delegate responsible for selection of row and what happens
@@ -116,7 +116,7 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
         }
         
         // Save updated coffee inventory with PersistencyHelper
-        PersistencyHelper.saveBeanInventory(coffeeInventory)
+        PersistencyHelper.beanShared.saveBeanInventory(coffeeInventory)
         navigationController?.popViewController(animated: true)
         
     }

@@ -10,12 +10,20 @@ import Foundation
 
 class PersistencyHelper {
     // Persist data in .plist file for InventoryViewController
-
-    static func saveBeanInventory(_ coffeeInventory: [CoffeeItem]) {
+    // Remove static
+    // Initialize a global variable and private constructor
+    // And change anywhere I call Persistency Helper to PersistencyHelper.beans.<FUNCTION>
+    
+    static let beanShared = PersistencyHelper()
+    
+    private init() {
+    }
+    
+    func saveBeanInventory(_ coffeeInventory: [CoffeeItem]) {
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(coffeeInventory)
-            try data.write(to: dataFilePath(), options: Data.WritingOptions.atomic)
+            try data.write(to: PersistencyHelper.dataFilePath(), options: Data.WritingOptions.atomic)
         }
         catch {
             print("Error encoding item array: \(error.localizedDescription)")
@@ -23,9 +31,9 @@ class PersistencyHelper {
         }
     }
     
-    static func loadInventory() -> [CoffeeItem] {
+    func loadInventory() -> [CoffeeItem] {
         var inventory = [CoffeeItem]()
-        let path = dataFilePath()
+        let path = PersistencyHelper.dataFilePath()
         if let data = try? Data(contentsOf: path) {
             let decoder = PropertyListDecoder()
             do {

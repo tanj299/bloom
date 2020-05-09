@@ -33,11 +33,15 @@
                                     <constraint firstAttribute="width" constant="137" id="vIE-BW-xSZ"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="aeropress_raw" translatesAutoresizingMaskIntoConstraints="NO" id="igI-6z-di6">
+                                <rect key="frame" x="67" y="381" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.8052254915" green="0.48818022010000001" blue="0.11668849739999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9QM-ho-5HI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SnB-Q9-YLE"/>
                             <constraint firstItem="9QM-ho-5HI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iJT-AS-Ayn"/>
+                            <constraint firstItem="igI-6z-di6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nuh-NI-BDf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,4 +51,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="aeropress_raw" width="22.666666030883789" height="52"/>
+    </resources>
 </document>

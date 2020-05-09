@@ -128,3 +128,7 @@ Breakpoint: expr -l objc++ -O -- [[UIWindow keyWindow] _autolayoutTrace]
     4. I can achieve either the following:
         - Display the results in table view OR
         - Output the closest cafe result as an address with reverse Geocoding (765)
+
+- Finding shortest distance method
+    - Acquire current location (DiscoverNewViewController)
+    - 

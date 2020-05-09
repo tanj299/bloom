@@ -128,15 +128,5 @@ extension URLSessionTestViewController {
         }
     }
     
-    
-//    func returnSession() {
-//        let session = URLSession.shared
-//        let url = String(format:"https://maps.googleapis.com/maps/api/place/search/json?location=\(hunterLatitude),\(hunterLongitude)&key=\(key)")
-//        let task = session.dataTask(with: url, completionHandler: {
-//            data, response, error in
-//            print(error)
-//            print(response)
-//        })
-//        task.resume()
-//    }
+//    func findShortestDistance(currentLocation: CLLocation, )
 }
