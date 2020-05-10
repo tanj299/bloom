@@ -60,7 +60,7 @@ Bloom helps users with their coffee journey - whether that is perfecting your cu
     - Auto Layout located throughout `Main.storyboard`
     - There were too many AutoLayout constraints to have done but I implemented enough to get the idea across
     - For example, in the images, simulating on an iPhone 8 and iPhone 11 fits the `BrewViewController` correctly without resizing the circular buttons
-    - See image `[iphone_8_vs_11.png](https://drive.google.com/open?id=167JV66fhxVOeFf6e1bUNbYtXnXym7-2O)`
+    - See image [iphone_8_vs_11.png](https://drive.google.com/open?id=167JV66fhxVOeFf6e1bUNbYtXnXym7-2O)
 - [x] Your app uses UserDefaults to save settings.
     - UserDefaults is located in `DiscoverNewViewController.swift` - line 22
     - Current UserDefaults sets the the search radius of user's location so next time user opens the app, the distance (in meters) is set
