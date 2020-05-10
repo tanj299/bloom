@@ -2,6 +2,7 @@
 ## A Coffee app
 ## Author: Jayson Tan
 
+### [GitHub](https://github.com/tanj299/bloom) 
 ### Overview
 Bloom helps users with their coffee journey - whether that is perfecting your cup, locating new roasters or cafes to try, or even simply to keep an inventory of your beans. This app offers the following components: 
 
