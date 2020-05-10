@@ -66,5 +66,5 @@ Bloom helps users with their coffee journey - whether that is perfecting your cu
     - Current UserDefaults sets the the search radius of user's location so next time user opens the app, the distance (in meters) is set
 - [x] Your app uses at least one of the following: ScrollView, TableView, and CollectionView
     - ScrollView is used in `BrewViewController` - see images `brewVC1.png` and `brewVC2.png` in "Screenshots" directory 
-
+    - ![brewVC1.png](https://github.com/tanj299/bloom/blob/master/Screenshots/brewVC1.png?raw=true)
 
