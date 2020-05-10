@@ -52,6 +52,8 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     var performingReverseGeocoding = false
     var lastGeocodingError: Error?
     
+    
+    
     // Timer
     var timer: Timer?
     
@@ -60,8 +62,8 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     
     // Latitude and Longitude
     // Not using optionals to aid in code readability
-    var latitude: Double = 0.0
-    var longitude: Double = 0.0
+    var myLatitude: Double = 0.0
+    var myLongitude: Double = 0.0
     
     
 // MARK: - Actions
@@ -246,9 +248,9 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             // Assign current latitude and longitude to query later
-            latitude = location.coordinate.latitude
-            longitude = location.coordinate.longitude
-            print("Latitude: \(latitude) | Longitude: \(longitude)" )
+            myLatitude = location.coordinate.latitude
+            myLongitude = location.coordinate.longitude
+            print("Latitude: \(myLatitude) | Longitude: \(myLongitude)" )
         }
             
         else {

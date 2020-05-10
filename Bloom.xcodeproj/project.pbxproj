@@ -15,6 +15,7 @@
 		640132EB243FA1C400D2479B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 640132E9243FA1C400D2479B /* LaunchScreen.storyboard */; };
 		640A22BB2465218500648428 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640A22BA2465218500648428 /* SearchResult.swift */; };
 		64133C0E243FB6660037231F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64133C0D243FB6660037231F /* DiscoverViewController.swift */; };
+		6413B794246777A6000A1D71 /* CafeInRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413B793246777A6000A1D71 /* CafeInRange.swift */; };
 		6420E043245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */; };
 		643AA8AC2452424600B2FB66 /* URLSessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643AA8AB2452424600B2FB66 /* URLSessionTest.swift */; };
 		649565EF245208ED007C49C8 /* PlacePlungerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */; };
@@ -45,6 +46,7 @@
 		640132F4243FA63000D2479B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		640A22BA2465218500648428 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		64133C0D243FB6660037231F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		6413B793246777A6000A1D71 /* CafeInRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeInRange.swift; sourceTree = "<group>"; };
 		6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCoffeeDetailTableViewController.swift; sourceTree = "<group>"; };
 		643AA8AB2452424600B2FB66 /* URLSessionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTest.swift; sourceTree = "<group>"; };
 		649565EE245208ED007C49C8 /* PlacePlungerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePlungerViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				64B25CC82464FC0C00F3BBB1 /* CafeDetailViewController.swift */,
 				64AA6301245CA69B009B3CAB /* CoffeeDetailViewController.swift */,
 				64C1F54824476B3700CC079A /* InventoryViewController.swift */,
+				6413B793246777A6000A1D71 /* CafeInRange.swift */,
 				64AA6303245CB162009B3CAB /* CoffeeItem.swift */,
 				64EF2B65245CFE0C00D21F5B /* CoffeeCellTableViewCell.swift */,
 				6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */,
@@ -211,6 +214,7 @@
 				640132E1243FA1C100D2479B /* BrewViewController.swift in Sources */,
 				64C1F54924476B3700CC079A /* InventoryViewController.swift in Sources */,
 				64E253392458E8500062F5DD /* Key.swift in Sources */,
+				6413B794246777A6000A1D71 /* CafeInRange.swift in Sources */,
 				64B25CC92464FC0C00F3BBB1 /* CafeDetailViewController.swift in Sources */,
 				640A22BB2465218500648428 /* SearchResult.swift in Sources */,
 				64FAD0F6245121A000DA02A4 /* StirViewController.swift in Sources */,

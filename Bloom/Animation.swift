@@ -24,7 +24,7 @@ extension UIView {
     // Fade Out any UIObject
     func fadeOut() {
 
-        UIView.animate(withDuration: 2.0, delay: 1.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 3.0, delay: 1.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
             
             // Think of .alpha as the opacity level: 0.0 = 0%
             self.alpha = 0.25

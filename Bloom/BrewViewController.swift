@@ -56,7 +56,7 @@ class BrewViewController: UIViewController {
     // (including all screens like AeroPress)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+//        navigationController?.isNavigationBarHidden = true
     }
     
     // Bring back the Navigation Bar on top after exiting Navigation Controller
