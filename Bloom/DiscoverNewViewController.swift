@@ -18,10 +18,41 @@ import CoreLocation
 
 
 class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
+// MARK: - User Defaults
+    let defaults = UserDefaults.standard
+    
+    struct Keys {
+        static let radius = "Radius"
+    }
+    
+    @IBOutlet weak var radiusField: UITextField!
+    @IBOutlet weak var setRadiusButton: UIButton!
+    
+    // Button to set radius and dismiss keyboard
+    @IBAction func setRadius () {
+        saveRadius()
+        radiusField.resignFirstResponder()
+    }
+    
+    func saveRadius () {
+        defaults.set(radiusField.text!, forKey: Keys.radius)
+    }
+    
+    func checkSavedRadius () {
+        let savedRadius = defaults.value(forKey: Keys.radius) as? String ?? ""
+        print("Curr radius: \(savedRadius)")
+        radiusField.text = savedRadius
+    }
+    
+    // Cast radius text as an Int to search 
+    func getSavedRadius () -> Int {
+        let savedRadius = defaults.value(forKey: Keys.radius) as? String ?? ""
+        print("Curr radius: \(savedRadius)")
+        radiusField.text = savedRadius
+        return Int(savedRadius) ?? 200
+    }
     
 // MARK: - URLSession Variables
-//    let defaults = UserDefaults.standard
-    
     var searchResults = [SearchResult]()
     var cafesInRange = [CafeInRange]()
     var cafe = CafeInRange()
@@ -32,7 +63,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var closestCafeButton: UIButton!
     @IBOutlet weak var closestCafeLabel: UILabel!
     @IBOutlet weak var closestCafeAddressLabel: UILabel!
-    
+
     // Use lazy var because this property cannot be accessed until after a `self` is initialized
     lazy var myLocation = CLLocation(latitude: 0, longitude: 0)
     
@@ -416,6 +447,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkSavedRadius()
         updateLabels()
     }
     
@@ -438,7 +470,8 @@ extension DiscoverNewViewController {
     func asyncCall() {
         let session = URLSession.shared
         // let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format:"\(Key.Routes.gRouteLocation)\(myLatitude),\(myLongitude)\(Key.Routes.gRouteRadiusPlacesKey)\(Key.Google.placesKey)")
+        // https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.767962,-73.964572&radius=200&type=cafe&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
+        let urlString = String(format:"\(Key.Routes.gRouteLocation)\(myLatitude),\(myLongitude)\(Key.Routes.gRouteRadius)\(getSavedRadius())\(Key.Routes.gRoutePlaceType)\(Key.Google.placesKey)")
         print("URL String: \(urlString)")
         let url = URL(string: urlString)
         
