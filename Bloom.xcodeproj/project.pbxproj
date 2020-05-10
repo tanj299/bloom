@@ -99,12 +99,12 @@
 			isa = PBXGroup;
 			children = (
 				640132E7243FA1C400D2479B /* Assets.xcassets */,
+				64B29066246878440084671E /* WIP Files */,
 				649565F624520A4D007C49C8 /* AeroPress */,
 				640132DC243FA1C100D2479B /* AppDelegate.swift */,
 				640132DE243FA1C100D2479B /* SceneDelegate.swift */,
 				640132E0243FA1C100D2479B /* BrewViewController.swift */,
 				64ADDEE82466322F0085E2F5 /* Animation.swift */,
-				64133C0D243FB6660037231F /* DiscoverViewController.swift */,
 				64E71A2C24648E5000DE8EDA /* DiscoverNewViewController.swift */,
 				64B25CC82464FC0C00F3BBB1 /* CafeDetailViewController.swift */,
 				64AA6301245CA69B009B3CAB /* CoffeeDetailViewController.swift */,
@@ -115,7 +115,6 @@
 				6420E042245DE35E001459C1 /* EditCoffeeDetailTableViewController.swift */,
 				64AA6305245CC09B009B3CAB /* PersistencyHelper.swift */,
 				64E253382458E8500062F5DD /* Key.swift */,
-				643AA8AB2452424600B2FB66 /* URLSessionTest.swift */,
 				640A22BA2465218500648428 /* SearchResult.swift */,
 				640132E4243FA1C100D2479B /* Main.storyboard */,
 				640132E9243FA1C400D2479B /* LaunchScreen.storyboard */,
@@ -134,6 +133,15 @@
 				649565F2245209F2007C49C8 /* PressViewController.swift */,
 			);
 			path = AeroPress;
+			sourceTree = "<group>";
+		};
+		64B29066246878440084671E /* WIP Files */ = {
+			isa = PBXGroup;
+			children = (
+				64133C0D243FB6660037231F /* DiscoverViewController.swift */,
+				643AA8AB2452424600B2FB66 /* URLSessionTest.swift */,
+			);
+			path = "WIP Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
