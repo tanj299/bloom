@@ -59,7 +59,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var tagButton: UIButton!
+//    @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
 
     
@@ -250,7 +250,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             // Show latitude / longitude with 8 digits behind decimal
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
-            tagButton.isHidden = false
+//            tagButton.isHidden = false
             closestCafeButton.isHidden = false
             messageLabel.text = ""
             
@@ -283,7 +283,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
             addressLabel.text = ""
-            tagButton.isHidden = true
+//            tagButton.isHidden = true
             closestCafeButton.isHidden = true
             let statusMessage: String
             

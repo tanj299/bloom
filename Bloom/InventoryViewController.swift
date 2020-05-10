@@ -19,8 +19,9 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
 //    @IBAction func addNew(_ sender: UIButton) {
 //        performSegue(withIdentifier: "addNew", sender: Any?.self)
 //    }
-//    
-    // MARK: - Unwind Segues from 'CoffeeDetailViewController'
+//
+    
+// MARK: - Unwind Segues from 'CoffeeDetailViewController'
     // Cancel button to prevent adding coffees
     @IBAction func cancel(segue:UIStoryboardSegue) {
     }
@@ -53,14 +54,13 @@ class InventoryViewController: UITableViewController, EditCoffeeDetailTableViewC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.rowHeight = 64
         coffeeInventory = PersistencyHelper.beanShared.loadInventory()
 
         // Do any additional setup after loading the view.
     }
     
-    // MARK: - Table View Data Source
+// MARK: - Table View Data Source
     // Table View data source for coffee inventory, including delegates
     
     // Delegate responsible to show number of rows
