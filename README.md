@@ -29,18 +29,18 @@ Bloom helps users with their coffee journey - whether that is perfecting your cu
 
 ### Checklist
 
-- [ ] Your app is written in Swift or Objective-C. (Javascript or any other programming languages are not allowed.)
-Your app uses native iOS frameworks. Third-party libraries/frameworks are not allowed.
-Your app does not use web views (not directly nor indirectly).
-Your app makes an API request with URLSession.
-Your app has a custom class that implements the Delegation pattern.
-Your app has a custom class that implements the Singleton pattern (thread-safe).
-Your app emits a sound or vibrates the device on an event.
-Your app utilizes a class that extends or subclasses at least one native class.
-Your app has at least three main views (UIViewControllers).
-Your app has at least one animation.
-Your app views are built with Auto Layout.
-Your app uses UserDefaults to save settings.
-Your app uses at least one of the following: ScrollView, TableView, and CollectionView
+- [x] Your app is written in Swift or Objective-C. (Javascript or any other programming languages are not allowed.)
+- [x] Your app uses native iOS frameworks. Third-party libraries/frameworks are not allowed.
+- [x] Your app does not use web views (not directly nor indirectly).
+- [x] Your app makes an API request with URLSession.
+- [x] Your app has a custom class that implements the Delegation pattern.
+- [x] Your app has a custom class that implements the Singleton pattern (thread-safe).
+- [x] Your app emits a sound or vibrates the device on an event.
+- [x] Your app utilizes a class that extends or subclasses at least one native class.
+- [x] Your app has at least three main views (UIViewControllers).
+- [x] Your app has at least one animation.
+- [x] Your app views are built with Auto Layout.
+- [x] Your app uses UserDefaults to save settings.
+- [x] Your app uses at least one of the following: ScrollView, TableView, and CollectionView
 
 
