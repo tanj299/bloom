@@ -16,15 +16,13 @@ class PressViewController: UIViewController {
     }
     
 
-//********************************************************************************
-// @IBOutlets
-//********************************************************************************
+// MARK: - Variables
     
     @IBOutlet weak var pressTimerLabel: UILabel!
         
     // Variable will hold starting value of timer
     // Can change to any amount above 0
-    var seconds = 2
+    var seconds = 30
     var timer = Timer()
     
     // Ensures that only one timer is created at a time
@@ -34,11 +32,7 @@ class PressViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var steps: UIView!
-        
-//********************************************************************************
-// @IBActions
-//********************************************************************************
-
+    
     @IBAction func start(_ sender: UIButton) {
         // Checks if timer is running; fixes the timer counting down faster
         // Prevents new Timer object from being created on each tap of the button
@@ -126,9 +120,9 @@ class PressViewController: UIViewController {
         self.performSegue(withIdentifier: "unwindToAeroPress", sender: self)
     }
 
-//********************************************************************************
-// @UIAlert
-//********************************************************************************
+    
+// MARK: - UIAlert
+    
     @IBAction func showAlert () {
         let alert = UIAlertController(title: "Done", message: "Brew finished!", preferredStyle: .alert)
         let yes = UIAlertAction(title: "OK", style: .default, handler: nil)

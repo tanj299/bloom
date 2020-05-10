@@ -25,7 +25,7 @@ class StirViewController: UIViewController {
         
     // Variable will hold starting value of timer
     // Can change to any amount above 0
-    var seconds = 2
+    var seconds = 15
     var timer = Timer()
     
     // Ensures that only one timer is created at a time

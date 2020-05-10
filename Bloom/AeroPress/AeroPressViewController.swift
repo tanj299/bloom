@@ -29,7 +29,7 @@ class AeroPressViewController: UIViewController {
         
     // Variable will hold starting value of timer
     // Can change to any amount above 0
-    var seconds = 3
+    var seconds = 10
     var timer = Timer()
     
     // Ensures that only one timer is created at a time
