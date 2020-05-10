@@ -66,4 +66,6 @@ Bloom helps users with their coffee journey - whether that is perfecting your cu
 - [x] Your app uses at least one of the following: ScrollView, TableView, and CollectionView
     - ScrollView is used in `BrewViewController` - see images `brewVC1.png` and `brewVC2.png` 
 
+![iPhone 8 vs iPhone 11]
+(https://drive.google.com/open?id=167JV66fhxVOeFf6e1bUNbYtXnXym7-2O)
 
