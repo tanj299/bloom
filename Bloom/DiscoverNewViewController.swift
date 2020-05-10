@@ -15,11 +15,44 @@ import CoreLocation
 // Hunter College Coordinates: 40.767962, -73.964207
 // Sample Query for `cafe` near Hunter College: Radius: 200m, Type: cafe
 // https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.767962,-73.964572&radius=200&type=cafe&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
-// Sample Query for 'Museum of Contemporary Art Australia'
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyChSr1L3g4pm6qdREQni1qzNUvPaUU-9yw
+
 
 class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
-
+    
+// MARK: - URLSession Variables
+//    let defaults = UserDefaults.standard
+    
+    var searchResults = [SearchResult]()
+    var cafesInRange = [CafeInRange]()
+    var cafe = CafeInRange()
+    var closestLocationCoordinates = 0.0
+    var minDistance = 100000000000.0
+    var closestCafeName = ""
+    var closestCafeAddress = ""
+    @IBOutlet weak var closestCafeButton: UIButton!
+    @IBOutlet weak var closestCafeLabel: UILabel!
+    @IBOutlet weak var closestCafeAddressLabel: UILabel!
+    
+    // Use lazy var because this property cannot be accessed until after a `self` is initialized
+    lazy var myLocation = CLLocation(latitude: 0, longitude: 0)
+    
+    // REST call to Google Places API; fetch locations
+    @IBAction func getClosestCafeButton() {
+        asyncCall()
+    }
+    
+    func parse(data: Data) -> [SearchResult] {
+        do {
+            let decoder = JSONDecoder()
+            let result = try decoder.decode(ResultArray.self, from: data)
+            return result.results
+        }
+        catch {
+            print("JSON Error: \(error)")
+            return []
+        }
+    }
+    
 // MARK: - Variables and Instances
     
     @IBOutlet weak var latitudeLabel: UILabel!
@@ -28,13 +61,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
-    
-    @IBOutlet weak var gLatitudeLabel: UILabel!
-    @IBOutlet weak var gLongitudeLabel: UILabel!
-    @IBAction func gGetLocation() {
-        
-    }
-    
+
     
     // CLLocation object that gives GPS coordinates
     // However, it doens't give location right away - use startUpdatingLocation()
@@ -51,8 +78,6 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     var placemark: CLPlacemark?
     var performingReverseGeocoding = false
     var lastGeocodingError: Error?
-    
-    
     
     // Timer
     var timer: Timer?
@@ -226,6 +251,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
             tagButton.isHidden = false
+            closestCafeButton.isHidden = false
             messageLabel.text = ""
             
             // Geocode - update the address label
@@ -258,6 +284,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             longitudeLabel.text = ""
             addressLabel.text = ""
             tagButton.isHidden = true
+            closestCafeButton.isHidden = true
             let statusMessage: String
             
             // If location services are disabled OR there is an error getting location
@@ -336,11 +363,6 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     func string(from placemark: CLPlacemark) -> String {
         var line1 = ""
         
-        // Name associated with placemark object
-        if let s = placemark.name {
-            line1 += s + " "
-        }
-        
         // Street level info associated with placemark object
         if let s = placemark.subThoroughfare {
             line1 += s + " "
@@ -398,7 +420,6 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     }
     
 // MARK: - Navigation
-    
     // Prepare for segue - pass information to `CafeDetailViewController`
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CafeLocation" {
@@ -406,5 +427,87 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             controller.coordinate = location!.coordinate
             controller.placemark = placemark
         }
+    }
+}
+
+
+// MARK: - URLSession Extension
+
+extension DiscoverNewViewController {
+    // Asynchronous Call
+    func asyncCall() {
+        let session = URLSession.shared
+        // let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let urlString = String(format:"\(Key.Routes.gRouteLocation)\(myLatitude),\(myLongitude)\(Key.Routes.gRouteRadiusPlacesKey)\(Key.Google.placesKey)")
+        print("URL String: \(urlString)")
+        let url = URL(string: urlString)
+        
+        let task = session.dataTask(with: url!, completionHandler: {
+            data, response, error in
+            
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                if let data = data {
+                    self.searchResults = self.parse(data: data)
+                    // self.searchResults.sort(by: <)
+                    print("Search Results: \(self.searchResults)")
+                    
+                    // Get name and coordinates from searchResults and throw them in an array
+                    for results in self.searchResults {
+                        self.cafe.name = results.name!
+                        self.cafe.latitude = results.geometry.location.lat
+                        self.cafe.longitude = results.geometry.location.lng
+                        self.cafe.vicinity = results.vicinity!
+                        self.cafesInRange.append(self.cafe)
+                        print("Coordinates: \(results.geometry.location.lat), \(results.geometry.location.lng)")
+                    }
+                                        
+                    // Search for the closest cafe to my current location
+                    // Update closest location in main thread
+                    for cafe in self.cafesInRange {
+                        print("All cafes: \(cafe)")
+                        self.closestLocationCoordinates = self.findDistance(myLocation: self.myLocation, latitude: self.cafe.latitude, longitude: self.cafe.longitude)
+                        if self.minDistance >= self.closestLocationCoordinates {
+                            self.minDistance = self.closestLocationCoordinates
+                            self.closestCafeName = cafe.name
+                            self.closestCafeAddress = cafe.vicinity
+                        }
+                    }
+                    
+                    print("Closest Location Coordinates: \(self.closestLocationCoordinates)")
+                    
+                    // This is the main thread, update label in main thread
+                    DispatchQueue.main.async {
+                        self.closestCafeLabel.text = self.closestCafeName
+                        self.closestCafeAddressLabel.text = self.closestCafeAddress
+                    }
+                    return
+                }
+            }
+            
+            do {
+                let json = try JSONDecoder().decode(SearchResult.self, from: data!)
+                print(json)
+            }
+            catch {
+                print("Error: \(error.localizedDescription)")
+            }
+        })
+        task.resume()
+    }
+    
+    // Find distance between my current location and all cafes near me
+    func findDistance(myLocation: CLLocation, latitude: Double, longitude: Double) -> Double {
+        var closestLocation = 0.0
+        let currentCafeLocation = CLLocation(latitude: latitude, longitude: longitude)
+        var minDistance = 1000000000000000.0
+        let distance = myLocation.distance(from: currentCafeLocation)
+        if minDistance >= distance {
+            minDistance = distance
+            closestLocation = distance
+        }
+        return closestLocation
     }
 }

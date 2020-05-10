@@ -1933,37 +1933,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWA-IZ-MjN">
-                                <rect key="frame" x="16" y="241" width="127" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Closest Cafe: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWA-IZ-MjN">
+                                <rect key="frame" x="16" y="241" width="107" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P52-iJ-QCb">
-                                <rect key="frame" x="16" y="270" width="141" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cafe here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q0-l0-mfU">
+                                <rect key="frame" x="179" y="241" width="181" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDC-UZ-4d0">
-                                <rect key="frame" x="16" y="203" width="141" height="30"/>
+                                <rect key="frame" x="127" y="471" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Google Get Location"/>
+                                <state key="normal" title="Find Closest Cafe"/>
                                 <connections>
-                                    <action selector="gGetLocation" destination="RkB-O9-iHs" eventType="touchUpInside" id="UFJ-1A-R2t"/>
+                                    <action selector="getClosestCafeButton" destination="RkB-O9-iHs" eventType="touchUpInside" id="2WQ-Jd-Euq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GLongitude here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqb-SB-T3M">
-                                <rect key="frame" x="232" y="270" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GLatitude here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q0-l0-mfU">
-                                <rect key="frame" x="232" y="241" width="128" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address here:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGT-YR-bP7">
+                                <rect key="frame" x="16" y="276" width="343" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1999,8 +1992,9 @@
                     <navigationItem key="navigationItem" id="h3o-F4-Odm"/>
                     <connections>
                         <outlet property="addressLabel" destination="By5-K2-wID" id="HQb-4a-twL"/>
-                        <outlet property="gLatitudeLabel" destination="3Q0-l0-mfU" id="6kO-nY-zdZ"/>
-                        <outlet property="gLongitudeLabel" destination="yqb-SB-T3M" id="d4l-46-FrV"/>
+                        <outlet property="closestCafeAddressLabel" destination="tGT-YR-bP7" id="lIr-KH-dHp"/>
+                        <outlet property="closestCafeButton" destination="uDC-UZ-4d0" id="Ebd-8O-X5f"/>
+                        <outlet property="closestCafeLabel" destination="3Q0-l0-mfU" id="FN9-mD-jnV"/>
                         <outlet property="getButton" destination="Wyy-31-m3Y" id="N6z-Jd-eUl"/>
                         <outlet property="latitudeLabel" destination="Y93-vb-jWY" id="Pvx-of-RaX"/>
                         <outlet property="longitudeLabel" destination="peL-KI-ImD" id="yli-ZQ-MfV"/>

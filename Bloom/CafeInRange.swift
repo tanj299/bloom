@@ -13,6 +13,7 @@ import CoreLocation
 // In other words, we can't directly append an object to an array 
 struct CafeInRange: Codable {
     var name = ""
+    var vicinity = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
 }

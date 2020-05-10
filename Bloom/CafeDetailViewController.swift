@@ -61,9 +61,9 @@ class CafeDetailViewController: UITableViewController {
     func string(from placemark: CLPlacemark) -> String {
         var line1 = ""
         
-        if let s = placemark.name {
-            line1 += s + " "
-        }
+//        if let s = placemark.name {
+//            line1 += s + " "
+//        }
         
         if let s = placemark.subThoroughfare {
             line1 += s + ", "

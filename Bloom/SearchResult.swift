@@ -26,9 +26,15 @@ class SearchResult: Codable, CustomStringConvertible {
         return "Name: \(name ?? "None")"
     }
     
+    var address: String {
+        return "Vicinity: \(vicinity ?? "None")"
+    }
+    
+    // Gets the value from the exact key of the JSON object
     enum CodingKeys: String, CodingKey {
         case name
         case geometry
+        case vicinity
     }
     
 }
