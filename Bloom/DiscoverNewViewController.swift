@@ -18,7 +18,10 @@ import CoreLocation
 
 
 class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
+    
 // MARK: - User Defaults
+    // Our UserDefaults settings is used to set the default search radius of the closest cafe
+    // If not set, it will return a radius of 200
     let defaults = UserDefaults.standard
     
     struct Keys {
@@ -44,7 +47,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
         radiusField.text = savedRadius
     }
     
-    // Cast radius text as an Int to search 
+    // Cast radius text as an Int to search
     func getSavedRadius () -> Int {
         let savedRadius = defaults.value(forKey: Keys.radius) as? String ?? ""
         print("Curr radius: \(savedRadius)")
@@ -63,12 +66,15 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var closestCafeButton: UIButton!
     @IBOutlet weak var closestCafeLabel: UILabel!
     @IBOutlet weak var closestCafeAddressLabel: UILabel!
-
+    @IBOutlet weak var closestCafe: UILabel!
+    @IBOutlet weak var closestAddress: UILabel!
+    
     // Use lazy var because this property cannot be accessed until after a `self` is initialized
     lazy var myLocation = CLLocation(latitude: 0, longitude: 0)
     
     // REST call to Google Places API; fetch locations
     @IBAction func getClosestCafeButton() {
+        cafesInRange.removeAll()
         asyncCall()
     }
     
@@ -90,7 +96,7 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-//    @IBOutlet weak var tagButton: UIButton!
+    // @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
 
     
@@ -281,8 +287,12 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             // Show latitude / longitude with 8 digits behind decimal
             latitudeLabel.text = String(format: "%.8f", location.coordinate.latitude)
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
-//            tagButton.isHidden = false
+            // tagButton.isHidden = false
+            closestCafeAddressLabel.isHidden = false
+            closestCafeLabel.isHidden = false
             closestCafeButton.isHidden = false
+            closestCafe.isHidden = false
+            closestAddress.isHidden = false
             messageLabel.text = ""
             
             // Geocode - update the address label
@@ -314,8 +324,13 @@ class DiscoverNewViewController: UIViewController, CLLocationManagerDelegate {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
             addressLabel.text = ""
-//            tagButton.isHidden = true
+            // tagButton.isHidden = true
             closestCafeButton.isHidden = true
+            closestCafeAddressLabel.isHidden = true
+            closestCafeLabel.isHidden = true
+            closestCafeButton.isHidden = true
+            closestCafe.isHidden = true
+            closestAddress.isHidden = true
             let statusMessage: String
             
             // If location services are disabled OR there is an error getting location
@@ -509,6 +524,11 @@ extension DiscoverNewViewController {
                         }
                     }
                     
+                    // If there is no cafe within searchable distance, output error
+                    if self.cafesInRange.isEmpty {
+                        self.closestCafeName = "No cafes can be found"
+                        self.closestCafeAddress = "Increase search radius please"
+                    }
                     print("Closest Location Coordinates: \(self.closestLocationCoordinates)")
                     
                     // This is the main thread, update label in main thread

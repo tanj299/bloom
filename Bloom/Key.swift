@@ -19,7 +19,5 @@ struct Key {
         static let gRouteLocation = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
         static let gRouteRadius = "&radius="
         static let gRoutePlaceType = "&type=cafe&key="
-        static let gRoutePlaces = "https://maps.googleapis.com/maps/api/place/search/output?parameters"
-        static let gRouteSample = "https://maps.googleapis.com/maps/api/place/search/json?location=-33.8670522,151.1957362&radius=500&types=food&sensor=true&key=AddYourOwnKeyHere"
     }
 }

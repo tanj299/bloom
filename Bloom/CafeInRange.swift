@@ -10,7 +10,8 @@ import Foundation
 import CoreLocation
 
 // We use a struct instead of class since classes are reference type
-// In other words, we can't directly append an object to an array 
+// In other words, we can't directly append an object to an array
+// Stores JSON object we care about into a CafeInRange instance
 struct CafeInRange: Codable {
     var name = ""
     var vicinity = ""
